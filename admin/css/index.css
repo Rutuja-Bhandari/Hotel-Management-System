@@ -1,0 +1,605 @@
+/* .coursal{
+    margin: 2vh;
+} */
+.navIndex{
+    background-color: rgb(31, 31, 33);
+}
+
+
+.navcolor{
+    color: white;
+}
+
+.aboutcolour{
+    color: #146C94;
+    margin: 2vh;
+}
+.container{
+    display: flexbox;
+    border: 0.2vh solid rgb(192, 177, 177);
+    align-items: center;
+    margin-top: 6vh;
+    margin-bottom: 2vh;
+    
+    /* text-shadow:0.1vh; */
+    box-shadow: 10px 10px 10px 10px #68a2b2;
+    /* color: #146C94; */
+    color: rgb(181, 183, 185);
+}
+
+body{
+    background-color: rgb(21, 22, 22);
+}
+h1{
+    text-align: center;
+}
+
+.roomsandrates{
+    margin: 15vh;
+    margin-bottom: 7vh;
+    color: #146C94;
+}
+.hoteltype{
+    margin:5vh 15vh;
+    border:0.4vh solid #68a2b2;
+    /* background-color: rgb(238, 241, 241); */
+    background-color: rgb(21, 22, 22);
+    border-radius: 2vh;
+    /* box-shadow:2px 2px 2px 2px #68a2b2; */
+    box-shadow: 0 3px 10px #68a2b2;
+
+    background-color: rgb(232, 238, 191);
+    
+}
+
+.hoteltype img{
+    margin: 2vh;
+    border-radius: 2vh;
+}
+
+
+.hoteltype .booknow button .check1{
+    background-color: #9cddfb;
+    border-radius: black 0.8vh solid;
+}
+
+/* .hoteltype .booknow .checka button .check{
+    background-color: #bad02b;
+}  */
+
+.check{
+    background-color: rgb(9, 143, 143);
+    /* border-radius: none; */
+    height: 7.5vh;
+    position: absolute;
+    left: 153px;
+    top: 175px;
+    border-radius: 1vh;
+}
+
+.check:hover{
+    background-color: #9cddfb;
+}
+
+.button:hover{
+    /* background-color: #68a2b2; */
+    background-color: rgb(22, 244, 244);
+}
+
+
+
+.typetext{
+    color: white;
+}
+
+footer{
+    background-color: rgb(59, 59, 59);
+    color: white;
+    height: 30vh;
+
+}
+
+
+
+/* .formdiv form{
+    margin: 90vh;
+} */
+
+.heading{
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+
+.heading span{
+    font-size: 3.5rem;
+    background: #146C94;
+    color: var(--orange);
+    border-radius: .5rem;
+    padding: .2rem 1rem;
+}
+
+.heading span.space{
+    background: none;
+}
+
+
+.screen{
+    background-color: rgb(0, 0, 0);
+}
+
+.book .formdiv{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    background-color: rgb(238, 238, 187);
+    margin: 50vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    /* opacity: 0.3; */
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    border-radius: 2vh;
+    /* box-shadow: 0 10px 10px 10px #146C94; */
+    border: 0.2vh #146C94 solid;
+}
+
+
+.book .formdiv form{
+    flex: 1 1 40rem; 
+    padding: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+}
+
+
+.book .formdiv form .inputBox{
+    padding: .5rem 0;
+    
+}
+
+
+.book .formdiv form .inputBox .label{
+    float:left;
+    width:50%;
+    height:280px;
+}
+
+
+.book .formdiv form .inputBox .fill{
+    float:right;
+   
+    width:50%;
+    height:280px;
+}
+
+
+
+
+/* .label{
+    float:left;
+    width:50%;
+    height:280px;
+}
+
+
+.fill{
+    float:right;
+   
+    width:50%;
+    height:280px;
+   
+} */
+
+
+
+.book .formdiv form .inputBox input{
+    width: 50%;
+    padding: 0.5rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    font-size: 1.7rem;
+    color: #333;
+
+    
+    
+    
+}
+
+
+.book .formdiv form .inputBox input .float{
+    float: right;
+}
+
+
+.book .formdiv form .inputBox h4{
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: #000000;
+}
+
+.btn{
+    margin-top: 3vh;
+    padding: 2vh 3vh;
+    background-color: rgb(9, 143, 143);
+    box-shadow: 0 3px 10px #68a2b2;
+}
+.btn:hover{
+    background-color: aquamarine;
+}
+
+
+
+
+
+
+
+
+
+.container1{
+    color: white;
+    text-align: center;
+}
+.container2 label{
+    width:15vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container3{
+    display: none;
+    background: #fff;
+    width: 410px;
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+
+
+#show:checked ~ .container3{
+    display: block;
+}
+
+.container3 .close-btn{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+.container3 .close-btn:hover{
+  color: #3498db;
+}
+
+.container3 .heading{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.container3 form{
+    margin-top: -20px;
+}
+
+
+.container3 form .data{
+    height: 45px;
+    width: 100%;
+    margin: 40px 0;
+  }
+
+form .data label{
+  font-size: 18px;
+}
+
+
+form .data input{
+  height: 100%;
+  width: auto;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 1px solid silver;
+}
+
+.container3  form .btn1{
+    margin: 30px 0;
+    height: 45px;
+    width: 100%;
+    /* position: relative;
+    overflow: hidden; */
+}
+
+.container3 form .btn1 .inner{
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popup{
+  background: rgba(0,0,0,.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  /* display: none; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.popup-content{
+  height: 250px;
+  width: 500px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  }
+
+  input{
+    margin: 20px auto;
+    display: block;
+    width: 50%;
+    padding: 8px;
+    border: 1px solid gray;
+  }
+
+  .close{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: #fff;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+
+
+
+
+.enter{
+    display: inline-flex;
+
+}
+
+.enter button{
+    margin-top: 10px;
+}
+
+
+
+
+.btn-group{
+    /* padding: 1px; */
+    margin-top: 0.1px;
+    margin-bottom: 9px;
+    margin-left: 9px;
+}
+.btn-secondary{
+    margin: 10px;
+}
+
+.already{
+    padding: 20px;
+    margin-left: 600px;
+    margin-top: 10px;
+    
+}
+
+
+.already1{
+    height: 60px;
+    margin: 40px;
+    padding: 20px;
+    background-color: #3498db;
+    border-radius: 7px;
+}
+
+.already1:hover{
+    background-color: aqua;
+}
+
+.h5{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.body {
+    background: #000000;
+    text-align: center;
+    font-family: 'Raleway', Helvetica, sans-serif;
+    min-width: 320px;
+}
+
+body {
+    
+    background-repeat: no-repeat;
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0%;
+    background-attachment: fixed;
+  }
+  
+
+#main-form {
+    background: rgb(223, 233, 163);
+    margin: 0 auto;
+    border-radius: 4px;
+    width: 75%;
+    max-width: 900px;
+    padding: 10px;
+    padding-top: 20px;
+    opacity: 0.9;
+   
+}
+
+.labels {
+    display: inline-block;
+    text-align: right;
+    width: 40%;
+    padding: 5px;
+    vertical-align: top;
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    
+    
+}
+
+.rightTab {
+    display: inline-block;
+    text-align: left;
+    width: 48%;
+    vertical-align: middle;
+}
+
+.input-field {
+    height: 20px;
+    width: 280px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+}
+
+#userAge {
+    width: 40px;
+}
+
+.userRatings,
+input[type="checkbox"] {
+    float: left;
+    margin-right: 5px;
+}
+
+#submit {
+    background-color: #59ace0;
+    border-radius: 4px;
+    color: white;
+    font-size: 1em;
+    height: 40px;
+    width: 96px;
+    margin: 10px;
+    border: 0px solid;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background: green;
+}
+
+.dropdown {
+    height: 35px;
+    width: 140px;
+    padding: 5px;
+    margin: 10px;
+    margin-top: 15px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+}
+
+.radio, .checkbox {
+    position: relative;
+    left: -43px;
+    margin-left: 10px;
+    display: block;
+    padding-bottom: 10px;
+}
+
+
+h1,h2{
+    color: rgb(199, 215, 15);
+    text-decoration: solid;
+    text-decoration-color: aliceblue;
+    text-shadow: -1px 0 black;
+}
+

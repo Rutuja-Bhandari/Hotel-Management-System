@@ -20,7 +20,7 @@ include ("connections.php");
   <body>
 
 
-    <header>
+  <header>
     <!--######################## Navigation Bar######################################### -->
   
     <div class="navIndex ">
@@ -43,17 +43,8 @@ include ("connections.php");
           </ul>
           
           <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-            <a class="btn btn-primary" href="#" role="button">Check In</a>
-            <a class="btn btn-primary" href="#" role="button">Check Out</a>
-            <a class="btn btn-primary" href="details.php" role="button">Details</a>
+          <a class="btn btn-primary" href="details.html" role="button">Details</a>
           </div>
-
-
-          
-
-
-
-
           </div>
         </div>
       </nav>
@@ -124,8 +115,8 @@ include ("connections.php");
         <h2 class="featurette-heading">Standard Rooms <span class="text-muted">See for yourself.</span></h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         <div class="booknow">
-          <button  type="button" class="btn btn-secondary" ><a style="color: white;" href="form_standard.php">Book Now</a></button>
-          <button method="post" id="standard" type="submit" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter"><a style="color: white;" >Check Availability</a></button>
+          <button  type="button" class="btn btn-secondary btn_booknow" ><a style="color: white;" href="form_standard.php">Book Now</a></button>
+          <button method="post" id="standard" type="submit" class="btn btn-secondary btn_booknow" data-toggle="modal" data-target="#exampleModalCenter"><a style="color: white;" >Check Availability</a></button>
         </div>
       </div>
       <div class="col-md-5 order-md-1">
@@ -150,7 +141,7 @@ include ("connections.php");
         
       </div>
       <div class="modal-footer">
-        <button  type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+        <button  type="button" class="btn btn-secondary " data-dismiss="modal">Close</button> 
       </div>
     </div>
   </div>
@@ -165,8 +156,8 @@ include ("connections.php");
         <h2 class="featurette-heading">Delux Rooms <span class="text-muted">It’ll blow your mind.</span></h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         <div class="booknow">
-          <button  type="button" class="btn btn-secondary" ><a style="color: white;" href="form_delux.php">Book Now</a></button>
-          <button method="post" id="delux" type="submit" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter"><a style="color: white;" >Check Availability</a></button>
+          <button  type="button" class="btn btn-secondary btn_booknow" ><a style="color: white;" href="form_delux.php">Book Now</a></button>
+          <button method="post" id="delux" type="submit" class="btn btn-secondary btn_booknow" data-toggle="modal" data-target="#exampleModalCenter1"><a style="color: white;" >Check Availability</a></button>
         </div>
       </div>
       <div class="col-md-5">
@@ -177,7 +168,7 @@ include ("connections.php");
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -204,8 +195,8 @@ include ("connections.php");
         <h2 class="featurette-heading">Double Delux Rooms. <span class="text-muted">See for yourself.</span></h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         <div class="booknow">
-          <button  type="button" class="btn btn-secondary" ><a style="color: white;" href="form_doubledelux.php">Book Now</a></button>
-          <button method="post" id="double_delux" type="submit" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter"><a style="color: white;" >Check Availability</a></button>
+          <button  type="button" class="btn btn-secondary btn_booknow" ><a style="color: white;" href="form_doubledelux.php">Book Now</a></button>
+          <button method="post" id="double_delux" type="submit" class="btn btn-secondary btn_booknow" data-toggle="modal" data-target="#exampleModalCenter2"><a style="color: white;" >Check Availability</a></button>
         </div>
       </div>
       <div class="col-md-5 order-md-1">
@@ -216,7 +207,7 @@ include ("connections.php");
   </div>
 
   <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -245,7 +236,7 @@ include ("connections.php");
 <script>
     document.getElementById("availability_standard").innerHTML = "<?php
 $room_type="Standard";
-$query="select 10- (select count(room_type) from rooms,billing where rooms.booking_id=billing.booking_id and room_type='$room_type' and leaving_date is NULL)";
+$query="select 10- (select count(room_type) from rooms,billing where room_id=billing_id and room_type='$room_type' and Status in ('Booked','Check In'))";
 $result = mysqli_query($con,$query);
 $final_result1=mysqli_fetch_assoc($result);
 foreach ($final_result1 as $value) {
@@ -256,12 +247,12 @@ echo " rooms are available";
 ?>";
 
 document.getElementById("availability_delux").innerHTML = "<?php
-$room_type="Delux";
-$query="select 10- (select count(room_type) from rooms,billing where rooms.booking_id=billing.booking_id and room_type='$room_type' and leaving_date is NULL)";
-$result = mysqli_query($con,$query);
-$final_result1=mysqli_fetch_assoc($result);
-foreach ($final_result1 as $value) {
-    echo $value;
+// $room_type="Delux";
+$query1="select 10- (select count(room_type) from rooms,billing where room_id=billing_id and room_type='Delux' and Status in ('Booked','Check In'))";
+$result1 = mysqli_query($con,$query1);
+$final_result2=mysqli_fetch_assoc($result1);
+foreach ($final_result2 as $value1) {
+    echo $value1;
 
 } 
 echo " rooms are available";
@@ -269,11 +260,11 @@ echo " rooms are available";
 
 document.getElementById("availability_double_delux").innerHTML = "<?php
 $room_type="Double Delux";
-$query="select 10- (select count(room_type) from rooms,billing where rooms.booking_id=billing.booking_id and room_type='$room_type' and leaving_date is NULL)";
-$result = mysqli_query($con,$query);
-$final_result1=mysqli_fetch_assoc($result);
-foreach ($final_result1 as $value) {
-    echo $value;
+$query="select 10- (select count(room_type) from rooms,billing where room_id=billing_id and room_type='$room_type' and Status in ('Booked','Check In'))";
+$result2 = mysqli_query($con,$query);
+$final_result3=mysqli_fetch_assoc($result2);
+foreach ($final_result3 as $value3) {
+    echo $value3;
 
 } 
 echo " rooms are available";

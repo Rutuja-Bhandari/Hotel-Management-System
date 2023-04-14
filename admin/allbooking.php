@@ -1,4 +1,7 @@
-
+<?php
+session_start();
+include ("connections.php");
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -37,7 +40,7 @@
           </ul>
           
           <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-            <a class="btn btn-primary" href="details.html" role="button">Details</a>
+          <a class="btn btn-primary" href="details.html" role="button">Details</a>
           </div>
           </div>
         </div>
@@ -47,37 +50,69 @@
 
 
     <h1 class="heading">
-        <span>D</span>
-        <span>e</span>
-        <span>t</span>
-        <span>a</span>
-        <span>i</span>
-        <span>l</span>
-        <span>s</span>
+        <span>B</span>
+        <span>O</span>
+        <span>O</span>
+        <span>K</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+        <span>S</span>
     </h1>
+                                        
+    <div class="panel-body booking">
+                      <div class="table-responsive">
+                      <table class="table">
+                      <thead>
+                      <tr>
+                      <th>Booking Id </th>
+                      <th>Name</th>
+                      <th>Aadhar No</th>
+                      <th>Phone no</th>
+											<th>Room Number</th>
+											<th>Room Type</th>
+											<th>Arrival Date</th>
+											<th>Leaving Date</th>
+											<th>Status</th>
+                      <th>Amount</th>
+											
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+									<?php
+									$tsql = "select booking_id,first_name,last_name,aadhar,phone_no,room_no,room_type,arrival_date,leaving_date,Status,amount from booking,rooms,billing";
+									$tre = mysqli_query($con,$tsql);
+									while($trow=mysqli_fetch_array($tre) )
+									{	
+										// $co =$trow['stat']; 
+										// if($co=="Not Conform")
+										// {
+											echo"<tr>
+												<th>".$trow['booking_id']."</th>
+												<th>".$trow['first_name']." ".$trow['last_name']."</th>
+												<th>".$trow['aadhar']."</th>
+												<th>".$trow['phone_no']."</th>
+												<th>".$trow['room_no']."</th>
+												<th>".$trow['room_type']."</th>
+												<th>".$trow['arrival_date']."</th>
+												<th>".$trow['leaving_date']."</th>
+												<th>".$trow['Status']."</th>
+												<th>".$trow['amount']."</th>
+												
+												</tr>";
+										// }	
+									
+									}
+									?>
+                                        
+                                    </tbody>
+                                </table>
+								
+                            </div>
+                        </div>
 
-    <div class="container1">
-      <div class="container2">
-          <form>
-            <label class="labeldetails" for="input_value">Enter Booking Id:</label>
-            <input class="inputdetails" type="text" id="input_value" name="input_value">
-            <div class="btn-group buttonallign" role="group" aria-label="Basic example"></div>
-            <button class="buttondetails btn btn-secondary" type="button" onclick="sendData()">Submit</button>
-            <button class="buttondetails btn btn-secondary" type="button" onclick="checkin()">Check In</button>
-            <button class="buttondetails btn btn-secondary" type="button" onclick="checkout()">Check Out</button>
-            <button class="buttondetails btn btn-secondary" type="button" onclick="Delete()">Delete</button>
-          </div>
-            </form>
-          </form>
-        </div>
-        <!-- <div  class="details">
-    <div  ></div>
-        </div> -->
-        <div class="details" id="result" ></div>
-        
-    </div>
 
- 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

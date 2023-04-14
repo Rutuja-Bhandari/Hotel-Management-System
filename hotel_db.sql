@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 12, 2023 at 09:49 AM
+-- Generation Time: Apr 14, 2023 at 10:09 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -33,17 +33,16 @@ CREATE TABLE `billing` (
   `leaving_date` date DEFAULT NULL,
   `arrival_time` time DEFAULT NULL,
   `leaving_time` time DEFAULT NULL,
-  `amount` int(6) DEFAULT NULL,
-  `booking_id` int(5) NOT NULL
+  `amount` int(6) DEFAULT 0,
+  `Status` varchar(9) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `billing`
 --
 
-INSERT INTO `billing` (`billing_id`, `arrival_date`, `leaving_date`, `arrival_time`, `leaving_time`, `amount`, `booking_id`) VALUES
-(1, '2023-04-12', NULL, NULL, NULL, NULL, 1),
-(2, '2023-04-14', NULL, NULL, NULL, NULL, 2);
+INSERT INTO `billing` (`billing_id`, `arrival_date`, `leaving_date`, `arrival_time`, `leaving_time`, `amount`, `Status`) VALUES
+(2, '2023-04-15', '2023-04-21', NULL, NULL, 0, 'Booked');
 
 -- --------------------------------------------------------
 
@@ -70,7 +69,7 @@ CREATE TABLE `booking` (
 --
 
 INSERT INTO `booking` (`booking_id`, `first_name`, `middle_name`, `last_name`, `aadhar`, `email`, `gender`, `phone_no`, `no_of_adult`, `no_of_child`, `address`) VALUES
-(1, 'Rutuja ', 'Bhushan', 'Bhandari', 569856325632, 'jhbgvfc@gmail.com', 'Female', 5632689562, 2, 2, 'dghjui');
+(2, 'rutuja', 'bhushan', 'bhandari', 523698563256, 'nmbnb@gmail.com', 'Female', 2368956232, 2, 2, 'ghhhbbnh');
 
 -- --------------------------------------------------------
 
@@ -81,17 +80,15 @@ INSERT INTO `booking` (`booking_id`, `first_name`, `middle_name`, `last_name`, `
 CREATE TABLE `rooms` (
   `room_id` int(6) NOT NULL,
   `room_no` int(3) DEFAULT NULL,
-  `room_type` varchar(12) NOT NULL,
-  `booking_id` int(5) NOT NULL
+  `room_type` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `rooms`
 --
 
-INSERT INTO `rooms` (`room_id`, `room_no`, `room_type`, `booking_id`) VALUES
-(1, NULL, '', 1),
-(2, 101, 'Standard', 2);
+INSERT INTO `rooms` (`room_id`, `room_no`, `room_type`) VALUES
+(2, NULL, 'Delux');
 
 -- --------------------------------------------------------
 
@@ -170,13 +167,13 @@ ALTER TABLE `billing`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `booking_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `booking_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `room_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `room_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

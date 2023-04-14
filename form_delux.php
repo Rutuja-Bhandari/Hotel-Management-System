@@ -17,28 +17,33 @@
             $no_of_childrens=$_POST["no_of_childrens"];
             $address=$_POST["address"];
             $arrival_date=$_POST["arrival_date"];
+            $leaving_date=$_POST["leaving_date"];
+            
 
             $query = " INSERT INTO `booking` ( `first_name`, `middle_name`, `last_name`, `aadhar`, `email`, `gender`, `phone_no`, `no_of_adult`, `no_of_child`, `address`) VALUES ('$first_name', '$middle_name', '$last_name', '$aadhar_no', '$email', '$gender', '$phone_no', '$no_of_adults', '$no_of_childrens', '$address')";
             mysqli_query($con,$query);
             $query1 = "INSERT INTO `rooms` (`room_type`) VALUES ('Delux')";
             mysqli_query($con,$query1);
-            $query2 = "INSERT INTO `billing` ( `arrival_date`) VALUES ('$arrival_date')";
+            $query2 = "INSERT INTO `billing` ( `arrival_date`,`leaving_date`,`Status`) VALUES ('$arrival_date','$leaving_date','Booked')";
             mysqli_query($con,$query2);
-            die;
+            header("location:index.php");
         }
 
 ?>
 
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <title>Form</title>
     <link rel="stylesheet" href="index.css">
-</head>
+  </head>
 <body class="body">
     <!-- <h1 id="title"><b>Form</b> </h1> -->
     <h1 class="heading">
@@ -158,13 +163,25 @@
                     <input name="arrival_date" autofocus type="date" name="name" id="name" class="input-field" placeholder="Enter no of adult" required>
                 </div>
             </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="name-label" for="name">* Leaving date: </label>
+                </div>
+                <div class="rightTab">
+                    <input name="leaving_date" autofocus type="date" name="name" id="name" class="input-field" placeholder="Enter no of adult" required>
+                </div>
+            </div>
             
             
             
             <button id="submit" type="submit">Confirm</button>
+
         </form>
     </div>
 
-</body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
 </html>
 

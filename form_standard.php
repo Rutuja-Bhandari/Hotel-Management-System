@@ -17,14 +17,17 @@
             $no_of_childrens=$_POST["no_of_childrens"];
             $address=$_POST["address"];
             $arrival_date=$_POST["arrival_date"];
+            $leaving_date=$_POST["leaving_date"];
+            $room_no=$_POST["room_no"];
+            
 
             $query = " INSERT INTO `booking` ( `first_name`, `middle_name`, `last_name`, `aadhar`, `email`, `gender`, `phone_no`, `no_of_adult`, `no_of_child`, `address`) VALUES ('$first_name', '$middle_name', '$last_name', '$aadhar_no', '$email', '$gender', '$phone_no', '$no_of_adults', '$no_of_childrens', '$address')";
             mysqli_query($con,$query);
-            $query1 = "INSERT INTO `rooms` (`room_type`) VALUES ('Standard')";
+            $query1 = "INSERT INTO `rooms` (`room_type`,`room_no`) VALUES ('Standard','$room_no')";
             mysqli_query($con,$query1);
-            $query2 = "INSERT INTO `billing` ( `arrival_date`) VALUES ('$arrival_date')";
+            $query2 = "INSERT INTO `billing` ( `arrival_date`,`leaving_date`,`Status`) VALUES ('$arrival_date','$leaving_date','Booked')";
             mysqli_query($con,$query2);
-            die;
+            header("location:index.php");
         }
 
 ?>
@@ -155,10 +158,26 @@
             </div>
             <div class="rowTab">
                 <div class="labels">
+                    <label id="name-label" for="name">* Room No: </label>
+                </div>
+                <div class="rightTab">
+                    <input name="room_no" autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your room number" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
                     <label id="name-label" for="name">* Arrival date: </label>
                 </div>
                 <div class="rightTab">
                     <input name="arrival_date" autofocus type="date" name="name" id="name" class="input-field" placeholder="Enter no of adult" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="name-label" for="name">* Leaving date: </label>
+                </div>
+                <div class="rightTab">
+                    <input name="leaving_date" autofocus type="date" name="name" id="name" class="input-field" placeholder="Enter no of adult" required>
                 </div>
             </div>
             

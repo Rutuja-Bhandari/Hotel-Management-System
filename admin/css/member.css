@@ -1,0 +1,132 @@
+/* html,body {
+    background-color: #0c1022;
+    text-align: center;
+    font-family: 'Raleway', Helvetica, sans-serif;
+    min-width: 320px;
+} */
+
+body {
+    background: linear-gradient(120deg,#2980b9, #8e44ad);
+    /* opacity: 0.6; */
+    background-repeat: no-repeat;
+    height: 100%;
+
+  /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0%;
+    background-attachment: fixed;
+    text-align: center;
+  }
+  
+
+#main-form {
+    background-color: #0c1022;
+    margin: 0 auto;
+    border-radius: 4px;
+    width: 75%;
+    max-width: 900px;
+    padding: 10px;
+    padding-top: 20px;
+    opacity: 0.9;
+   
+}
+
+.labels {
+    display: inline-block;
+    text-align: right;
+    width: 40%;
+    padding: 5px;
+    vertical-align: top;
+    margin-top: 10px;
+    color: white;
+    
+}
+
+.rightTab {
+    display: inline-block;
+    text-align: left;
+    width: 48%;
+    vertical-align: middle;
+}
+
+.input-field {
+    height: 20px;
+    width: 280px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+}
+
+#userAge {
+    width: 40px;
+}
+
+.userRatings, input[type="checkbox"] {
+    float: left;
+    margin-right: 5px;
+}
+
+#submit {
+    background-color: #59ace0;
+    border-radius: 4px;
+    color: white;
+    font-size: 1em;
+    height: 40px;
+    width: 96px;
+    margin: 10px;
+    border: 0px solid;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background: green;
+}
+
+.dropdown {
+    height: 35px;
+    width: 140px;
+    padding: 5px;
+    margin: 10px;
+    margin-top: 15px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+}
+
+.radio, .checkbox {
+    position: relative;
+    left: -43px;
+    margin-left: 10px;
+    display: block;
+    padding-bottom: 10px;
+    color: white;
+}
+
+
+h1,h2{
+    color: rgb(199, 215, 15);
+    text-decoration: solid;
+    text-decoration-color: aliceblue;
+    text-shadow: -1px 0 black;
+}
+
+.heading{
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+
+.heading span{
+    font-size: 3.5rem;
+    /* background: #146C94; */
+    background: rgb(17, 10, 94);
+    color: var(--orange);
+    border-radius: .5rem;
+    padding: .2rem 1rem;
+}
+
+.heading span.space{
+    background: none;
+}

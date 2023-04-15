@@ -27,20 +27,14 @@ include ("connections.php");
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link navcolor" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link navcolor" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link navcolor" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link navcolor" href="#">Room Type</a>
-            </li>
-          </ul>
+            </ul>
           
           <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-          <a class="btn btn-primary" href="details.html" role="button">Details</a>
+          <a class="btn btn-primary" href="details.html" role="button" >Details</a>
           </div>
           </div>
         </div>

@@ -389,7 +389,18 @@ form .data input{
 
 
 
-  
+  .billing{
+    padding-top: 5vh;
+    float: right;
+    border: 1vh solid white;
+    /* background-color: rgb(238, 238, 187); */
+    background:linear-gradient(120deg,#2980b9,#8e44ad) ;
+    color: #000000;
+    height: 100vh;
+    width:95vh;
+    margin-bottom: 5vh 10vh;
+    font-size: 2.5vh;
+  }
 
 
 
@@ -663,4 +674,10 @@ h1,h2{
     color: #000000;
     margin: 0 ;
     margin: 10vh 5vh;
+}
+
+
+
+.result1{
+
 }

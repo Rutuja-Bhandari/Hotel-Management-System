@@ -44,6 +44,8 @@ include ("connections.php");
           
           <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
           <a class="btn btn-primary" href="details.html" role="button">Details</a>
+          <a class="btn btn-primary" href="membership.php" role="button">membership</a>
+          <a class="btn btn-primary" href="allbooking.php" role="button">All Bookings</a>
           </div>
         </div>
       </nav>

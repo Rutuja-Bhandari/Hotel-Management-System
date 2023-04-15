@@ -7,7 +7,7 @@ $booking_id  = $_GET['input_value'];
 
             $query="select booking_id,first_name,middle_name,last_name,aadhar,email,gender,phone_no,no_of_adult,no_of_child,address,room_id,room_no,room_type,billing_id,arrival_date,leaving_date,Status,amount from booking,rooms,billing where booking.booking_id='$booking_id' and room_id='$booking_id' and billing_id='$booking_id'";
             $result=mysqli_query($con,$query);
-            if ($result->num_rows == 0) {
+            if ($result->num_rows == null) {
                 // Display an alert if the record does not exist
                 echo "<script>alert('Booking Id not found!')</script>";
               }

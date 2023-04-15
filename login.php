@@ -31,11 +31,11 @@ include ("connections.php");
         		}
 			}
 
-            echo "Wrong user name and password.";
+            echo "<script>alert('Wrong user name and password.')</script>";
         }
         else
         {
-            echo "Wrong user name and password.";
+          echo "<script>alert('Wrong user name and password.')</script>";
         }
     }
 

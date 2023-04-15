@@ -4,6 +4,8 @@
     
         if($_SERVER['REQUEST_METHOD']=="POST")
         {
+            // echo "Connection is obtained successfully";
+            // $booking_id;
             $first_name=$_POST["first_name"];
             $middle_name=$_POST["middle_name"];
             $last_name=$_POST["last_name"];
@@ -13,19 +15,12 @@
             $phone_no=$_POST["phone_no"];
             $address=$_POST["address"];
             $room_no=$_POST["room_no"];
-            $arrival_date=$_POST["arrival_date"];
-            $leaving_date=$_POST["leaving_date"];
-            $no_of_adults=$_POST["no_of_adults"];
-            $no_of_childrens=$_POST["no_of_childrens"];
+            $verified=$_POST["verified"];
 
-            $query = " INSERT INTO `booking` ( `first_name`, `middle_name`, `last_name`, `aadhar`, `email`, `gender`, `phone_no`, `no_of_adult`, `no_of_child`, `address`) VALUES ('$first_name', '$middle_name', '$last_name', '$aadhar_no', '$email', '$gender', '$phone_no', '$no_of_adults', '$no_of_childrens', '$address')";
+            $query = " INSERT INTO `membership` ( `first_name`, `middle_name`, `last_name`, `aadhar`, `email`, `gender`, `phone_no`, `address`,`room_no`,`verified`) VALUES ('$first_name', '$middle_name', '$last_name', '$aadhar_no', '$email', '$gender', '$phone_no', '$address','$room_no','$verified')";
             mysqli_query($con,$query);
-            $query1 = "INSERT INTO `rooms` (`room_type`,`room_no`) VALUES ('Double Delux','$room_no')";
-            mysqli_query($con,$query1);
-            $query2 = "INSERT INTO `billing` ( `arrival_date`,`leaving_date`,`Status`) VALUES ('$arrival_date','$leaving_date','Booked')";
-            mysqli_query($con,$query2);
             echo "alert('Congratulation! Your booking is confirmed!!')";
-            header("location:index.php");
+            header("location:membership.php");
         }
 
 ?>
@@ -127,22 +122,6 @@
             </div>
             <div class="rowTab">
                 <div class="labels">
-                    <label id="name-label" for="name">* No of Adult:</label>
-                </div>
-                <div class="rightTab">
-                    <input name="no_of_adults" autofocus type="number" min="0" name="name" id="name" class="input-field" placeholder="Enter number od adult" required>
-                </div>
-            </div>
-            <div class="rowTab">
-                <div class="labels">
-                    <label id="name-label" for="name">* No of Children:</label>
-                </div>
-                <div class="rightTab">
-                    <input name="no_of_childrens" autofocus type="number" min="0" name="name" id="name" class="input-field" placeholder="Enter number od children" required>
-                </div>
-            </div>
-            <div class="rowTab">
-                <div class="labels">
                     <label id="name-label" for="name">* Room no:</label>
                 </div>
                 <div class="rightTab">
@@ -151,34 +130,16 @@
             </div>
             <div class="rowTab">
                 <div class="labels">
-                    <label id="name-label" for="name">* Arrival date:</label>
+                    <label for="userRating">* Verified: </label>
                 </div>
-                <div class="rightTab">
-                    <input name="arrival_date" autofocus type="date" min="0" name="name" id="name" class="input-field" placeholder="Enter Arrival date" required>
-                </div>
-            </div>
-            <div class="rowTab">
-                <div class="labels">
-                    <label id="name-label" for="name">* Leaving date:</label>
-                </div>
-                <div class="rightTab">
-                    <input name="leaving_date" autofocus type="date" min="0" name="name" id="name" class="input-field" placeholder="Enter leaving date" required>
-                </div>
-            </div>
-            <div class="rowTab">
-                <div class="labels">
-                    <label for="preferences">Facilities: </label>
-                </div>
-                <div class="rightTab">
-                    <ul id="preferences" style="list-style: none;">
-                        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">Extra bed (Rs 15000 per bed)</label></li>
-                        <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">Car parking (Rs 300 per day)</li>
-                        <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">Spa (Rs 2800 per person)  </label></li>
-                        <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">Gym access (Rs 750 per day) </label></li>
-                        
+                <div class="rightTab" >
+                    <ul style="list-style: none;" name="verified" >
+                        <li class="radio"><input name="verified"  name="radio-buttons" value="Yes"  type="radio" class="userRatings" >Yes</li>
+                        <li class="radio"><input name="verified"  name="radio-buttons" value="No"  type="radio" class="userRatings" >No</li>
                     </ul>
                 </div>
             </div>
+            
 
 
 

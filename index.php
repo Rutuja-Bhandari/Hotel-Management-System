@@ -41,6 +41,10 @@ include ("connections.php");
               <a class="nav-link navcolor" href="#">Room Type</a>
             </li>
           </ul>
+          
+          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+          <a class="btn btn-primary" href="login.php" role="button">Login</a>
+          </div>
         </div>
       </nav>
     </div>
@@ -107,7 +111,7 @@ include ("connections.php");
 
     <div class="row featurette hoteltype">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Standard Rooms <span class="text-muted">See for yourself.</span></h2>
+        <h2 class="featurette-heading roomtypecolor"><b>Standard Rooms </b></h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         <div class="booknow">
           <button  type="button" class="btn btn-secondary btn_booknow" ><a style="color: white;" href="form_standard.php">Book Now</a></button>
@@ -127,7 +131,7 @@ include ("connections.php");
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Standard Room</h5>
+        <h5 class="modal-title" id="exampleModalCenterTitle"><b>Standard Room</b></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -148,7 +152,7 @@ include ("connections.php");
 
     <div class="row featurette hoteltype">
       <div class="col-md-7">
-        <h2 class="featurette-heading">Delux Rooms <span class="text-muted">It’ll blow your mind.</span></h2>
+        <h2 class="featurette-heading roomtypecolor"><b>Delux Rooms</b> </h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         <div class="booknow">
           <button  type="button" class="btn btn-secondary btn_booknow" ><a style="color: white;" href="form_delux.php">Book Now</a></button>
@@ -167,7 +171,7 @@ include ("connections.php");
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Delux Room</h5>
+        <h5 class="modal-title" id="exampleModalCenterTitle"><b>Delux Room</b></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -187,7 +191,7 @@ include ("connections.php");
 
     <div class="row featurette hoteltype">
       <div class="col-md-7 order-md-2 typetext">
-        <h2 class="featurette-heading">Double Delux Rooms. <span class="text-muted">See for yourself.</span></h2>
+        <h2 class="featurette-heading roomtypecolor"><b>Double Delux Rooms.</b></h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         <div class="booknow">
           <button  type="button" class="btn btn-secondary btn_booknow" ><a style="color: white;" href="form_doubledelux.php">Book Now</a></button>
@@ -206,7 +210,7 @@ include ("connections.php");
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Double Delux Room</h5>
+        <h5 class="modal-title" id="exampleModalCenterTitle"><b>Double Delux Room1</b></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -239,10 +243,17 @@ foreach ($final_result1 as $value) {
 
 } 
 echo " rooms are available";
+
+echo"<br> Room Numbers are ";
+$query1="select room_details.room_no from room_details where room_type='$room_type' and room_details.room_no not in (select room_no from rooms,billing where room_id=billing_id and room_type='$room_type' and Status in ('Booked','Check In'))";
+    $result1 = mysqli_query($con,$query1);
+    while ($row = mysqli_fetch_assoc($result1)) {
+        echo $row["room_no"] . " , ";
+    }
 ?>";
 
 document.getElementById("availability_delux").innerHTML = "<?php
-// $room_type="Delux";
+$room_type="Delux";
 $query1="select 10- (select count(room_type) from rooms,billing where room_id=billing_id and room_type='Delux' and Status in ('Booked','Check In'))";
 $result1 = mysqli_query($con,$query1);
 $final_result2=mysqli_fetch_assoc($result1);
@@ -251,6 +262,13 @@ foreach ($final_result2 as $value1) {
 
 } 
 echo " rooms are available";
+
+echo"<br> Room Numbers are ";
+$query1="select room_details.room_no from room_details where room_type='$room_type' and room_details.room_no not in (select room_no from rooms,billing where room_id=billing_id and room_type='$room_type' and Status in ('Booked','Check In'))";
+    $result1 = mysqli_query($con,$query1);
+    while ($row = mysqli_fetch_assoc($result1)) {
+        echo $row["room_no"] . " , ";
+    }
 ?>";
 
 document.getElementById("availability_double_delux").innerHTML = "<?php
@@ -263,6 +281,13 @@ foreach ($final_result3 as $value3) {
 
 } 
 echo " rooms are available";
+
+echo"<br> Room Numbers are ";
+$query1="select room_details.room_no from room_details where room_type='$room_type' and room_details.room_no not in (select room_no from rooms,billing where room_id=billing_id and room_type='$room_type' and Status in ('Booked','Check In'))";
+    $result1 = mysqli_query($con,$query1);
+    while ($row = mysqli_fetch_assoc($result1)) {
+        echo $row["room_no"] . " , ";
+    }
 ?>";
 
 </script>

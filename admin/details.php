@@ -3,10 +3,15 @@ session_start();
 include ("connections.php");
 // get form data
 $booking_id  = $_GET['input_value'];
+// $booking_id=1;
 
-
-$query="select booking_id,first_name,middle_name,last_name,aadhar,email,gender,phone_no,no_of_adult,no_of_child,address,room_id,room_no,room_type,billing_id,arrival_date,leaving_date,Status,amount from booking,rooms,billing where booking.booking_id='$booking_id' and room_id='$booking_id' and billing_id='$booking_id'";
+            $query="select booking_id,first_name,middle_name,last_name,aadhar,email,gender,phone_no,no_of_adult,no_of_child,address,room_id,room_no,room_type,billing_id,arrival_date,leaving_date,Status,amount from booking,rooms,billing where booking.booking_id='$booking_id' and room_id='$booking_id' and billing_id='$booking_id'";
             $result=mysqli_query($con,$query);
+            if ($result->num_rows == 0) {
+                // Display an alert if the record does not exist
+                echo "<script>alert('Booking Id not found!')</script>";
+              }
+              else{
             $final_result=mysqli_fetch_assoc($result);
 			echo "Booking Id         : ".$final_result["booking_id"]."<br>";
             echo "First Name         : ".$final_result["first_name"]."<br>";
@@ -27,4 +32,5 @@ $query="select booking_id,first_name,middle_name,last_name,aadhar,email,gender,p
             echo "leaving Date       : ".$final_result["leaving_date"]."<br>";
             echo "Status             : ".$final_result["Status"]."<br>";
             echo  "Amount            : ".$final_result["amount"]."<br>";
+        }
 ?>

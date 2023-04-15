@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+
+
 /* .coursal{
     margin: 2vh;
 } */
@@ -21,9 +25,11 @@
     margin-top: 6vh;
     margin-bottom: 2vh;
     
+    
     /* text-shadow:0.1vh; */
-    box-shadow: 10px 10px 10px 10px #68a2b2;
+    /* box-shadow: 10px 10px 10px 10px #68a2b2; */
     /* color: #146C94; */
+    box-shadow: 10px 10px 10px 10px #ba98ca;
     color: rgb(181, 183, 185);
 }
 
@@ -47,11 +53,15 @@ h1{
     border-radius: 2vh;
     /* box-shadow:2px 2px 2px 2px #68a2b2; */
     box-shadow: 0 3px 10px #68a2b2;
-
-    background-color: rgb(232, 238, 191);
-    
+    font-family: 'Manrope', sans-serif;
+    /* background-color: rgb(232, 238, 191); */
+    background:linear-gradient(120deg,#2980b9,#8e44ad) ;
 }
-
+.roomtypecolor
+{
+    color:#0c1022;
+    padding-top: 2vh;
+}
 .hoteltype img{
     margin: 2vh;
     border-radius: 2vh;
@@ -113,7 +123,7 @@ footer{
 
 .heading span{
     font-size: 3.5rem;
-    background: #146C94;
+    background: rgb(17,10,94);
     color: var(--orange);
     border-radius: .5rem;
     padding: .2rem 1rem;
@@ -217,14 +227,15 @@ footer{
     color: #000000;
 }
 
-.btn{
+.btn_booknow{
     margin-top: 3vh;
     padding: 2vh 3vh;
-    background-color: rgb(9, 143, 143);
+    /* background-color: rgb(9, 143, 143); */
+    background-color: rgb(42, 42, 169);
     box-shadow: 0 3px 10px #68a2b2;
 }
-.btn:hover{
-    background-color: aquamarine;
+.btn_booknow:hover{
+    background-color: rgb(124, 69, 169);
 }
 
 
@@ -487,7 +498,7 @@ form .data input{
 
 
 .body {
-    background: #000000;
+    background: linear-gradient(120deg,#2980b9,#8e44ad);
     text-align: center;
     font-family: 'Raleway', Helvetica, sans-serif;
     min-width: 320px;
@@ -507,7 +518,8 @@ body {
   
 
 #main-form {
-    background: rgb(223, 233, 163);
+    /* background: rgb(223, 233, 163); */
+    background-color: #0c1022;
     margin: 0 auto;
     border-radius: 4px;
     width: 75%;
@@ -525,8 +537,8 @@ body {
     padding: 5px;
     vertical-align: top;
     margin-top: 10px;
-    color: rgb(0, 0, 0);
-    
+    /* color: rgb(0, 0, 0); */
+    color: white;
     
 }
 

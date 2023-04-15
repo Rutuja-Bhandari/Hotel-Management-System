@@ -50,14 +50,14 @@ include ("connections.php");
 
 
     <h1 class="heading">
-        <span>B</span>
-        <span>O</span>
-        <span>O</span>
-        <span>K</span>
-        <span>I</span>
-        <span>N</span>
-        <span>G</span>
-        <span>S</span>
+        <span >B</span>
+        <span >O</span>
+        <span >O</span>
+        <span >K</span>
+        <span >I</span>
+        <span >N</span>
+        <span >G</span>
+        <span >S</span>
     </h1>
                                         
     <div class="panel-body booking">
@@ -81,7 +81,7 @@ include ("connections.php");
                                     <tbody>
                                         
 									<?php
-									$tsql = "select booking_id,first_name,last_name,aadhar,phone_no,room_no,room_type,arrival_date,leaving_date,Status,amount from booking,rooms,billing";
+									$tsql = "select booking_id,first_name,last_name,aadhar,phone_no,room_no,room_type,arrival_date,leaving_date,Status,amount from booking,rooms,billing where booking_id=room_id and room_id=billing_id";
 									$tre = mysqli_query($con,$tsql);
 									while($trow=mysqli_fetch_array($tre) )
 									{	

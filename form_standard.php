@@ -27,6 +27,7 @@
             mysqli_query($con,$query1);
             $query2 = "INSERT INTO `billing` ( `arrival_date`,`leaving_date`,`Status`) VALUES ('$arrival_date','$leaving_date','Booked')";
             mysqli_query($con,$query2);
+            alert("Congratulation! Your booking is confirmed!!");
             header("location:index.php");
         }
 
@@ -104,7 +105,7 @@
             </div>
             <div class="rowTab">
                 <div class="labels">
-                    <label id="name-label" for="name">* Aadhar no: </label>
+                    <label id="name-label" for="name" >* Aadhar no: </label>
                 </div>
                 <div class="rightTab">
                     <input name="aadhar_no" autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your aadhar no" required>

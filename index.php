@@ -15,6 +15,7 @@ include ("connections.php");
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Hotel Management System</title>
   </head>
   <body>
@@ -225,11 +226,175 @@ include ("connections.php");
   </div>
 </div>
 
-    <footer>
+
+    
+<!-- ################################Gallery start########################################33 -->
+  <p class="heading"> <b>Our Gallery</b> </p>
+  <div class="gallery-image">
+    <div class="img-box">
+      <img src="gal1.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Bedrooms</p>
+          
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="gal2.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Luxury looks</p>
+        </div>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="gal3.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Asthetic furniture</p>
+        </div>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="gal4.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Best views</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="gal5.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Dinning room</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="gal6.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Sitting area</p>
+        </div>
+      </div> 
+    </div>
+  </div>
+<!-- ##########################galleryend#################### -->
+
+<!-- ##############################facilities star############################ -->
+
+
+
+
+<section class="services" id="services">
+  <p class="heading"> <b>Services</b> </p>
+
+  
+
+  <div class="box-container">
+
+      <div class="box">
+          <i class="fas fa-hotel"></i>
+          <h3>Affordable Hotels</h3>
+          <p>A hotel that provides minimum amenities and services for a lower price than a regular hotel in the area. This type of hotel provides clean rooms that are safe and meet the basic needs of a guest. Extra amenities may be available, but for an extra cost.</p>
+      </div>
+
+
+      <div class="box">
+          <i class="fas fa-utensils"></i>
+          <h3>Food and Drinks</h3>
+          <p>Exploring different cuisines has always been associated with moments of leisure and travel, but the concept of food tourism has recently evolved to encompass activities beyond the plate. We offer various different types of cuisines with us.</p>
+      </div>
+
+
+
+      <div class="box">
+          <i class="fas fa-globe-asia"></i>
+          <h3>Around the world</h3>
+          <p>A round-the-world trip is truly one of the most unforgettable travel experiences. Visiting multiple countries and continents, you gain a deep understanding of hundreds of cultures, and forge wonderful connections with people around the world.</p>
+      </div>
+
+      <div class="box">
+          <i class="fas fa-fire"></i>
+          <h3>Camp Fire</h3>
+          <p>Want to enjoy campfire? You are at right place. You can enjoy the campfire at night with your family and friends. </p>
+      </div>
+
+    
+  </div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ####################facilities end############33 -->
+
+
+<!-- ##########################footer start################### -->
+  <footer class="footer">
+    <div class="container7">
+      <div class="row">
+        <!-- <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">affiliate program</a></li>
+          </ul>
+        </div> -->
+        <div class="footer-col">
+          <h4>About us</h4>
+
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, obcaecati.</p>
+          
+        </div>
+        <div class="footer-col">
+          <h4>Our Highlights</h4>
+          <ul>
+            <li><a href="#">Sea faced rooms</a></li>
+            <li><a href="#">Swimming pool</a></li>
+            <li><a href="#">Gym access</a></li>
+            <li><a href="#">Spa</a></li>
+            <li><a href="#">Amazing cuisin</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our branches</h4>
+          <ul>
+            <li><a href="#">Pune</a></li>
+            <li><a href="#">Mumbai</a></li>
+            <li><a href="#">Kolkata</a></li>
+            <li><a href="#">Hydrabad</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+ </footer>
+
+
+
+    <!-- <footer>
       <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus autem a dolorum, fugit ad rem recusandae consequuntur architecto, quaerat unde consectetur? Debitis, nemo hic. Dolore, quasi deleniti. Nemo quas velit voluptatem deserunt, obcaecati illo labore illum asperiores quos nisi culpa. Sed asperiores a libero vero quibusdam, possimus at voluptatem laudantium.
     </p>
-    </footer>
+    </footer> -->
 
 
 <script>

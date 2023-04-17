@@ -38,6 +38,13 @@ include ("connections.php");
             <li class="nav-item">
               <a class="nav-link navcolor" href="#">Room Type</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link navcolor" href="membershipallbooking.php">All bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navcolor" href="roomdetails.php">Room bookings</a>
+            </li>
+      </li>
           </ul>
           
           <!-- <div class="btn-group" role="group" aria-label="Button group with nested dropdown"> -->

@@ -41,6 +41,7 @@ include ("connections.php");
             <li class="nav-item">
               <a class="nav-link navcolor" href="#">Room Type</a>
             </li>
+            
           </ul>
           
           <div class="btn-group" role="group" aria-label="Button group with nested dropdown">

@@ -91,7 +91,7 @@
                     <label id="name-label" for="name">* Room no:</label>
                 </div>
                 <div class="rightTab">
-                    <input name="room_no" autofocus type="number" min="0" name="name" id="name" class="input-field" placeholder="Enter Room number " required>
+                    <input name="room_no" autofocus type="text" min="0" name="name" id="name" class="input-field" placeholder="Enter Room number " required>
                 </div>
             </div>
             <div class="rowTab">

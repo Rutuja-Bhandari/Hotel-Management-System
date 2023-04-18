@@ -22,6 +22,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $leaving_date = $_POST["leaving_date"];
     $no_of_adults = $_POST["no_of_adults"];
     $no_of_childrens = $_POST["no_of_childrens"];
+    $extra_bed= isset($_POST["extra_bed"]) ? "Yes" : "No";
+    $car_parking= isset($_POST["car_parking"]) ? "Yes" : "No";
+    $spa= isset($_POST["spa"]) ? "Yes" : "No";
+    $gym= isset($_POST["gym"]) ? "Yes" : "No";
 
     $query = " INSERT INTO `booking` ( `first_name`, `middle_name`, `last_name`, `aadhar`, `email`, `gender`, `phone_no`, `no_of_adult`, `no_of_child`, `address`) VALUES ('$first_name', '$middle_name', '$last_name', '$aadhar_no', '$email', '$gender', '$phone_no', '$no_of_adults', '$no_of_childrens', '$address')";
     mysqli_query($con, $query);
@@ -33,6 +37,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $result = mysqli_query($con, $query3);
     $row = mysqli_fetch_assoc($result);
     $booking_id = $row["booking_id"];
+    $query4="INSERT INTO `facilities` ( `booking_id`,`extra_bed`, `car_parking`, `spa`, `gym`) VALUES ('$booking_id','$extra_bed', '$car_parking', '$spa', '$gym');";
+    mysqli_query($con,$query4);
     echo "alert('Congratulation! Your booking is confirmed!!')";
     header("location:index.php");
     $mail = new PHPMailer();
@@ -43,12 +49,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $mail->SMTPSecure = "tls";
     $mail->Port = 587;
     $mail->Host = "smtp.gmail.com";
-    $mail->Username = "devesh.22110833@viit.ac.in";
-    $mail->Password = "abc";
-
+    $mail->Username = "rutuja.22110669@viit.ac.in";
+    $mail->Password = "smar418#";
     $mail->IsHTML(true);
     $mail->AddAddress("$email", "$first_name $last_name");
-    $mail->SetFrom("devesh.22110833@viit.ac.in", "Devesh");
+    $mail->SetFrom("rutuja.22110669@gmail.com", "Rutuja");
     $mail->Subject = "Your Reservation Confirmation at JW Marriott";
     $content = "<b>Dear $first_name Sir/Madam,<br>
     We are delighted to confirm your reservation at JW Marriott for $arrival_date to $leaving_date. We appreciate your choice to stay with us and look forward to providing you with a comfortable and memorable experience.<br>
@@ -61,9 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     Number of Adults: $no_of_adults<br>
     Number of Adults: $no_of_childrens<br>
     Please note that your reservation is guaranteed, and you do not need to reconfirm it. If you need to make any changes to your reservation, please contact us at 7420054834 or reply to this email, and we will be happy to assist you.<br>
-    
     Thank you for choosing JW Marriott, and we look forward to welcoming you soon.<br>
-    
     Best regards,<br>
     JW Marriott Team.</b>";
 
@@ -236,18 +239,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </div>
                 <div class="rightTab">
                     <ul id="preferences" style="list-style: none;">
-                        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox"
-                                    class="userRatings">Extra bed (Rs 15000 per bed)</label></li>
-                        <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">Car
-                            parking (Rs 300 per day)</li>
-                        <li class="checkbox"><label><input name="prefer" value="3" type="checkbox"
-                                    class="userRatings">Spa (Rs 2800 per person) </label></li>
-                        <li class="checkbox"><label><input name="prefer" value="4" type="checkbox"
-                                    class="userRatings">Gym access (Rs 750 per day) </label></li>
-
+                        <li class="checkbox"><label><input name="extra_bed" value="1" type="checkbox" class="userRatings">Extra bed (Rs 15000 per bed)</label></li>
+                        <li class="checkbox"><input name="car_parking" value="1" type="checkbox" class="userRatings">Car parking (Rs 300 per day)</li>
+                        <li class="checkbox"><label><input name="spa" value="1" type="checkbox" class="userRatings">Spa (Rs 2800 per person)  </label></li>
+                        <li class="checkbox"><label><input name="gym" value="1" type="checkbox" class="userRatings">Gym access (Rs 750 per day) </label></li>
+                        
                     </ul>
                 </div>
             </div>
+
+
 
 
 

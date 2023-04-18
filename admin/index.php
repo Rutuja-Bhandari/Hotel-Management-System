@@ -26,7 +26,7 @@ include ("connections.php");
   
     <div class="navIndex ">
     <nav class="navbar navbar-expand-lg   ">
-      <a class="navbar-brand navcolor" href="#">Navbar</a>
+      <a class="navbar-brand navcolor" href="#">JW Marriott Hotel</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -41,7 +41,6 @@ include ("connections.php");
             <li class="nav-item">
               <a class="nav-link navcolor" href="#">Room Type</a>
             </li>
-            
           </ul>
           
           <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
@@ -68,22 +67,19 @@ include ("connections.php");
           <div class="carousel-item active">
             <img src="images/swimming2.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h3>Swimming pool</h3>
-              <!-- <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
+              <h3>Swimming Pool</h3>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="images/mainpagebedroom2.jpg" class="d-block w-100" alt="...">
+            <img src="images/gal6.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h3>Luxury bedrooms</h3>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+              <h3>Hotel View</h3>
             </div>
           </div>
           <div class="carousel-item">
             <img src="images/hotel5.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h3>Best views</h3>
-              <!-- <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> -->
+              <h3>Best Views</h3>
             </div>
           </div>
         </div>
@@ -103,7 +99,15 @@ include ("connections.php");
 
     <div class="container">
       <h1 class="aboutcolour"> About</h1>
-      <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolore ullam quo dolorum veniam molestiae, ea optio amet sint porro harum nobis minima maiores odit, suscipit perferendis dolores incidunt officia quidem eaque commodi, ad qui. Laborum dolorum consequatur et odio, maiores totam aliquam, recusandae consectetur officiis unde saepe fuga minima architecto omnis quod. Praesentium voluptate dolorum, quasi iste perspiciatis deleniti exercitationem, numquam quia odio, ea iure accusamus reprehenderit maiores ullam voluptatibus voluptatem magnam dignissimos! Ducimus sint earum corrupti vel! Est assumenda perferendis minima corporis atque impedit illo asperiores esse velit, maiores cumque ab eos pariatur beatae quis. Natus ipsam, reiciendis quas dolorem tempora similique consectetur architecto neque delectus. Minus molestias molestiae amet cupiditate odit. Eius quam iste id adipisci veritatis minima consequuntur molestiae. Architecto quasi, explicabo dolorum exercitationem perspiciatis, molestias deleniti mollitia repellendus, dolore dolor ex consectetur consequuntur. Dicta, aperiam impedit quod delectus iste repudiandae magnam accusantium ipsam expedita iure sapiente amet facere id ducimus sunt doloremque assumenda odit? Expedita saepe commodi, quibusdam hic nesciunt dolor laudantium dignissimos dolorum eos soluta amet perferendis assumenda ipsa sit tempora sequi quasi reiciendis deserunt earum, quisquam blanditiis dolores illo! At magni praesentium, libero numquam voluptas alias obcaecati sequi consectetur doloribus est amet, nemo nobis atque iusto non nostrum! Eaque molestias illum esse temporibus placeat est veniam magnam cumque voluptas minima ab iste officiis, nam atque at modi nemo omnis numquam molestiae repudiandae earum! Obcaecati aut natus dolor rerum! Amet laboriosam unde ullam quae voluptatem. Sed earum eius quisquam. Eos, deserunt. Officiis dicta eligendi esse perferendis fugit ad repellat mollitia eum quaerat. Odio dolorum consectetur tenetur placeat ut ad ipsam, beatae similique laudantium facilis nostrum, in saepe quam corporis ipsa debitis. Dolores ipsum et fugiat voluptates ex, architecto deserunt incidunt placeat distinctio. Similique maiores voluptate ea cupiditate magni praesentium! Dicta consequuntur nostrum quis earum.</p>
+      <p >Welcome to The JW Marriott, a luxurious boutique hotel located in the Pune. Our hotel offers a unique blend of modern amenities and timeless charm, with elegant decor and world-class service that will make your stay unforgettable.
+
+Each of our guest rooms has been designed with your comfort in mind, featuring plush bedding, high-speed internet, and a flat-screen TV with premium channels. Many rooms also offer stunning views of the city skyline or the nearby harbor.
+
+When it comes to dining, The JW Marriott has you covered. Our on-site restaurant, The Veranda, serves up delicious cuisine using only the freshest, locally-sourced ingredients. For a more casual dining experience, visit our cozy cafe, where you can enjoy a coffee or tea and a light snack.
+
+Looking to stay active during your trip? Our fitness center is fully equipped with state-of-the-art equipment, or you can take a dip in our indoor pool or relax in the sauna. If you're in town for business, we also offer a range of meeting and event spaces that can accommodate groups of all sizes.
+
+Located just steps from some of the city's top attractions, including the renowned Museum of Modern Art and the bustling shopping district, The Amaranth is the perfect home base for your next urban adventure. Book your stay today and experience the ultimate in luxury and sophistication.</p>
     </div>
 
 
@@ -116,7 +120,16 @@ include ("connections.php");
     <div class="row featurette hoteltype">
       <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading roomtypecolor"><b>Standard Rooms </b></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <p class="lead" style="color:black"><b>1 extra large beds.<br>
+                        This room has a tea/coffee maker, sofa and air conditioning.<br>
+                        <b>Ameneties</b><br>
+                        Room : 38 m²<br>
+                        City view<br>
+                        Air conditioning<br>
+                        Ensuite bathroom<br>
+                        Flat-screen TV<br>
+                        Free WiFi<br>
+                        Rates = ₹10000 <br></b></p>
         <div class="booknow">
           <button  type="button" class="btn btn-secondary btn_booknow" ><a style="color: white;" href="form_standard.php">Book Now</a></button>
           <button method="post" id="standard" type="submit" class="btn btn-secondary btn_booknow" data-toggle="modal" data-target="#exampleModalCenter"><a style="color: white;" >Check Availability</a></button>
@@ -124,7 +137,7 @@ include ("connections.php");
       </div>
       <div class="col-md-5 order-md-1">
         <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-        <img  class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="images/stdroom1.jpg" alt="">
+        <img  class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="images/stdroom.jpg" alt="">
       </div>
     </div>
 
@@ -157,7 +170,16 @@ include ("connections.php");
     <div class="row featurette hoteltype">
       <div class="col-md-7">
         <h2 class="featurette-heading roomtypecolor"><b>Delux Rooms</b> </h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <p class="lead" style="color:black"><b>1 extra large beds.<br>
+                        This room has a tea/coffee maker, sofa and air conditioning.<br>
+                        <b>Ameneties</b><br>
+                        Room : 38 m²<br>
+                        City view<br>
+                        Air conditioning<br>
+                        Ensuite bathroom<br>
+                        Flat-screen TV<br>
+                        Free WiFi<br>
+                        Rates = ₹10000 <br></b></p>
         <div class="booknow">
           <button  type="button" class="btn btn-secondary btn_booknow" ><a style="color: white;" href="form_delux.php">Book Now</a></button>
           <button method="post" id="delux" type="submit" class="btn btn-secondary btn_booknow" data-toggle="modal" data-target="#exampleModalCenter1"><a style="color: white;" >Check Availability</a></button>
@@ -165,7 +187,7 @@ include ("connections.php");
       </div>
       <div class="col-md-5">
         <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-        <img  class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="images/deluxroom1.jpg" alt="">
+        <img  class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="images/deluxe.jpg" alt="">
       </div>
     </div>
 
@@ -195,8 +217,17 @@ include ("connections.php");
 
     <div class="row featurette hoteltype">
       <div class="col-md-7 order-md-2 typetext">
-        <h2 class="featurette-heading roomtypecolor"><b>Double Delux Rooms.</b> </h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h2 class="featurette-heading roomtypecolor"><b>Double Delux Rooms.</b></h2>
+        <p class="lead" style="color:black"><b>2 extra large beds.<br>
+                        This double room has a tea/coffee maker, sofa and air conditioning.<br>
+                        <b>Ameneties</b><br>
+                        Room : 38 m²<br>
+                        City view<br>
+                        Air conditioning<br>
+                        Ensuite bathroom<br>
+                        Flat-screen TV<br>
+                        Free WiFi<br>
+                        Rates = ₹10000 <br></b></p>
         <div class="booknow">
           <button  type="button" class="btn btn-secondary btn_booknow" ><a style="color: white;" href="form_doubledelux.php">Book Now</a></button>
           <button method="post" id="double_delux" type="submit" class="btn btn-secondary btn_booknow" data-toggle="modal" data-target="#exampleModalCenter2"><a style="color: white;" >Check Availability</a></button>
@@ -204,7 +235,7 @@ include ("connections.php");
       </div>
       <div class="col-md-5 order-md-1">
         <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-        <img  class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="images/doubledeluxroom1.jpg" alt="">
+        <img  class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="images/double.jpg" alt="">
       </div>
     </div>
   </div>
@@ -228,6 +259,7 @@ include ("connections.php");
     </div>
   </div>
 </div>
+
 
 
     <!-- ################################Gallery start########################################33 -->
@@ -355,7 +387,7 @@ include ("connections.php");
         <div class="footer-col">
           <h4>About us</h4>
 
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, obcaecati.</p>
+          <p>Rutuja Bhandari<br>Minal Chaudhari<br>Devesh Zinzuwadia<br>Sanket Dhakane</p>
           
         </div>
         <div class="footer-col">
@@ -401,7 +433,7 @@ include ("connections.php");
 <script>
     document.getElementById("availability_standard").innerHTML = "<?php
 $room_type="Standard";
-$query="select 10- (select count(room_type) from rooms,billing where room_id=billing_id and room_type='$room_type' and Status in ('Booked','Check In'))";
+$query="select 5- (select count(room_type) from rooms,billing where room_id=billing_id and room_type='$room_type' and Status in ('Booked','Check In'))";
 $result = mysqli_query($con,$query);
 $final_result1=mysqli_fetch_assoc($result);
 foreach ($final_result1 as $value) {
@@ -420,7 +452,7 @@ $query1="select room_details.room_no from room_details where room_type='$room_ty
 
 document.getElementById("availability_delux").innerHTML = "<?php
 $room_type="Delux";
-$query1="select 10- (select count(room_type) from rooms,billing where room_id=billing_id and room_type='Delux' and Status in ('Booked','Check In'))";
+$query1="select 5- (select count(room_type) from rooms,billing where room_id=billing_id and room_type='Delux' and Status in ('Booked','Check In'))";
 $result1 = mysqli_query($con,$query1);
 $final_result2=mysqli_fetch_assoc($result1);
 foreach ($final_result2 as $value1) {
@@ -440,7 +472,7 @@ $query1="select room_details.room_no from room_details where room_type='$room_ty
 
 document.getElementById("availability_double_delux").innerHTML = "<?php
 $room_type="Double Delux";
-$query="select 10- (select count(room_type) from rooms,billing where room_id=billing_id and room_type='$room_type' and Status in ('Booked','Check In'))";
+$query="select 5- (select count(room_type) from rooms,billing where room_id=billing_id and room_type='$room_type' and Status in ('Booked','Check In'))";
 $result2 = mysqli_query($con,$query);
 $final_result3=mysqli_fetch_assoc($result2);
 foreach ($final_result3 as $value3) {

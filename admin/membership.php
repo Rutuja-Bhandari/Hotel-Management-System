@@ -94,7 +94,7 @@ include ("connections.php");
 </div>
 
     <!-- ################################Gallery start########################################33 -->
-  <p class="heading"> <b>Our Royal Suit</b> </p>
+  <p class="heading"> <b>Our Royal Suite</b> </p>
   <div class="gallery-image">
     <div class="img-box">
       <img src="images/royal2.jpg" alt="" />
@@ -216,7 +216,7 @@ include ("connections.php");
 
 <script>
     document.getElementById("result").innerHTML = "<?php
-$query="select 10- (select count(room_no) from membership)";
+$query="select 5- (select count(room_no) from membership)";
 $result2 = mysqli_query($con,$query);
 $final_result3=mysqli_fetch_assoc($result2);
 foreach ($final_result3 as $value3) {

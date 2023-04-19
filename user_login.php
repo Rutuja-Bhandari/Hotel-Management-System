@@ -14,7 +14,7 @@ include ("connections.php");
         {
             //read database
             
-            $query = "select * from login where user_name = '$user_name' limit 1";
+            $query = "select * from user_login where user_name = '$user_name' limit 1";
             $result = mysqli_query($con,$query);
 			if($result)
 			{
@@ -25,7 +25,7 @@ include ("connections.php");
 					{
 						$_SESSION['user_id'] = $user_data['user_id'];
 						echo"Login Successfully";
-						header("Location: admin/index.php");
+						header("Location:index.php");
 						die;
 					}
         		}
@@ -47,7 +47,7 @@ include ("connections.php");
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Admin Login Page</title>
+    <title>User Login Page</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
@@ -63,7 +63,7 @@ include ("connections.php");
 
     <div class="login_form_container">
         <div class="login_form">
-          <h2>Admin Login</h2>
+          <h2>USER LOGIN</h2>
           <div class="input_group">
             <i class="fa fa-user"></i>
             <input type="text" name="user_name" placeholder="Username" class="input_text" autocomplete="off"/>
@@ -76,8 +76,8 @@ include ("connections.php");
           <div class="sub">
           <input class="btn btn-primary " type="submit" value="Submit">
           </div>
-          <a href="user_login.php" style="color:#2980b9">User Login</a><br><br>
-          <a href="user_signup.php" style="color:#2980b9">User Sign up</a><br><br>
+          <a href="user_signup.php" style="color:#2980b9">Click to Signup</a><br><br>
+          <a href="login.php" style="color:#2980b9">Admin login</a><br><br>
         </div>
       </div>
 

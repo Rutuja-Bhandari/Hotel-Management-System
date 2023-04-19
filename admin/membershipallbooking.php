@@ -12,7 +12,7 @@ include ("connections.php");
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
-    <title>Hotel Management System</title>
+    <title>All Bookings</title>
   </head>
   <body>
     <script src="details.js"></script>
@@ -37,7 +37,7 @@ include ("connections.php");
             </ul>
           
           <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-          <a class="btn btn-primary" href="roomdetails.php" role="button" >Entries details</a>
+          <a class="btn btn-primary" href="roomdetails.php" role="button" >Checkin Checkout details</a>
           </div>
           </div>
         </div>

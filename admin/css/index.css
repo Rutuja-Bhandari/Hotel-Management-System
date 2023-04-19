@@ -252,7 +252,7 @@ footer{
     width:30vh;
 }
 .labeldetails{
-    padding-left: 15vh;
+    padding-left: 11vh;
 /* color: white; */
 font-size: 4vh;
 }
@@ -836,7 +836,7 @@ body {
 }
 
 .input-field {
-    height: 20px;
+    height: 30px;
     width: 280px;
     padding: 5px;
     margin: 15px;

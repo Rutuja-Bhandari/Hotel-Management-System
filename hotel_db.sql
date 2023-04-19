@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2023 at 07:15 PM
+-- Generation Time: Apr 19, 2023 at 04:00 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -43,10 +43,17 @@ CREATE TABLE `billing` (
 
 INSERT INTO `billing` (`billing_id`, `arrival_date`, `leaving_date`, `arrival_time`, `leaving_time`, `amount`, `Status`) VALUES
 (2, '2023-04-15', '2023-04-21', NULL, NULL, 0, 'Check Out'),
-(5, '2023-04-22', '2023-04-29', NULL, NULL, 0, 'Booked'),
 (6, '2023-04-21', '2023-04-28', NULL, NULL, 0, 'Booked'),
 (7, '2023-04-22', '2023-04-29', NULL, NULL, 0, 'Booked'),
-(8, '0000-00-00', '2023-05-22', NULL, NULL, 0, 'Booked');
+(8, '0000-00-00', '2023-05-22', NULL, NULL, 0, 'Booked'),
+(9, '2023-04-20', '2023-04-21', NULL, NULL, 0, 'Booked'),
+(10, '2023-04-20', '2023-04-22', NULL, NULL, 0, 'Booked'),
+(11, '2023-04-20', '2023-04-21', NULL, NULL, 0, 'Booked'),
+(12, '2023-04-21', '2023-04-24', NULL, NULL, 0, 'Booked'),
+(13, '2023-04-28', '2023-04-29', NULL, NULL, 0, 'Booked'),
+(14, '2023-04-20', '2023-04-22', NULL, NULL, 0, 'Booked'),
+(15, '2023-04-21', '2023-04-29', NULL, NULL, 0, 'Booked'),
+(31, '2023-04-14', '2023-04-21', NULL, NULL, 59850, 'Check Out');
 
 -- --------------------------------------------------------
 
@@ -74,10 +81,40 @@ CREATE TABLE `booking` (
 
 INSERT INTO `booking` (`booking_id`, `first_name`, `middle_name`, `last_name`, `aadhar`, `email`, `gender`, `phone_no`, `no_of_adult`, `no_of_child`, `address`) VALUES
 (2, 'rutuja', 'bhushan', 'bhandari', 523698563256, 'nmbnb@gmail.com', 'Female', 2368956232, 2, 2, 'ghhhbbnh'),
-(5, 'dfe', 're', 'et', 25632, 'sa@gmail.com', 'Female', 2, 22, 2, 'et'),
-(6, 'mkfm', 'mgghmm', 'mfgn', 1263, 'mmn@gmail.com', 'Female', 23562, 2, 2, 'ffmn'),
-(7, 'm m', 'cxm', 'csdm', 526356985632, 'fsd@gmail.com', 'Female', 4589632569, 2, 2, 'sdm'),
-(8, 'Rutuja', 'jkd', 'dskfk', 589652365896, 'wjrwji4@gmail.com', 'Female', 4445485425, 2, 2, 'kewihw');
+(8, 'Rutuja', 'jkd', 'dskfk', 589652365896, 'wjrwji4@gmail.com', 'Female', 4445485425, 2, 2, 'kewihw'),
+(9, '', '', '', 0, 'huhu@gmail.com', '', 0, 0, 0, ''),
+(10, 'kjskd', 'asidj', 'kowjjk', 478569856325, 'reett@gmail.com', 'Female', 5896523658, 2, 2, 'fge'),
+(29, 'mrmk', 'ftklr', 'rtjo', 985658985656, 'smartrb4@gmail.com', 'Female', 1111111111, 2, 2, 'etkj'),
+(31, 'jhj', 'mnmb', 'mmb nbn', 444444444444, 'happy.thoughts.845@gmail.com', 'Female', 8888888888, 2, 2, 'bhgh');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `facilities`
+--
+
+CREATE TABLE `facilities` (
+  `booking_id` int(11) NOT NULL,
+  `extra_bed` varchar(3) NOT NULL DEFAULT 'No',
+  `car_parking` varchar(3) DEFAULT 'No',
+  `spa` varchar(3) NOT NULL DEFAULT 'No',
+  `gym` varchar(3) NOT NULL DEFAULT 'No'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `facilities`
+--
+
+INSERT INTO `facilities` (`booking_id`, `extra_bed`, `car_parking`, `spa`, `gym`) VALUES
+(1, '0', '0', '0', '0'),
+(1, '0', '0', '0', '0'),
+(0, '0', '2', '3', '0'),
+(1, '0', '0', '0', '0'),
+(14, '0', '0', '0', '0'),
+(20, '0', '1', '0', '1'),
+(28, '0', '1', '1', '0'),
+(29, '0', '0', '1', '1'),
+(31, 'No', 'No', 'Yes', 'Yes');
 
 -- --------------------------------------------------------
 
@@ -125,7 +162,8 @@ CREATE TABLE `membership` (
 INSERT INTO `membership` (`membership_id`, `first_name`, `middle_name`, `last_name`, `aadhar`, `email`, `gender`, `phone_no`, `address`, `room_no`, `verified`) VALUES
 (1, 'Rutuja', 'Bhushan', 'Bhandari', 125896545632, 'sjnjb@gmail.com', 'female', 5896562356, 'd mncb ndndnbhsb', 401, 'yes'),
 (2, 'r n ', 'sm c', 'skmk', 5896532562, 'mkm@gmail.com', '', 48, 'dmkm', 402, ''),
-(3, 'rutuja', 'bhushan', 'bhandari', 458965236523, 'ds@gmail.com', '', 5896523658, 'dnj', 403, '');
+(3, 'rutuja', 'bhushan', 'bhandari', 458965236523, 'ds@gmail.com', '', 5896523658, 'dnj', 403, ''),
+(12, 'dfs', 'dfgdf', 'fd', 568956235698, 'fdh@gmail.com', 'Female', 2568989652, 'fdh', 404, 'Yes');
 
 -- --------------------------------------------------------
 
@@ -167,8 +205,15 @@ CREATE TABLE `rooms` (
 
 INSERT INTO `rooms` (`room_id`, `room_no`, `room_type`) VALUES
 (2, 101, 'Delux'),
-(5, 101, 'Standard'),
-(8, 101, 'Standard');
+(8, 101, 'Standard'),
+(9, 101, 'Standard'),
+(10, 108, 'Standard'),
+(11, 801, 'Standard'),
+(12, 207, 'Standard'),
+(13, 208, 'Standard'),
+(14, 306, 'Standard'),
+(15, 305, 'Standard'),
+(31, 101, 'Standard');
 
 -- --------------------------------------------------------
 
@@ -178,35 +223,54 @@ INSERT INTO `rooms` (`room_id`, `room_no`, `room_type`) VALUES
 
 CREATE TABLE `room_details` (
   `room_no` int(3) NOT NULL,
-  `room_type` varchar(12) NOT NULL
+  `room_type` varchar(12) NOT NULL,
+  `amount` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `room_details`
 --
 
-INSERT INTO `room_details` (`room_no`, `room_type`) VALUES
-(101, 'Standard'),
-(102, 'Standard'),
-(103, 'Standard'),
-(104, 'Standard'),
-(105, 'Standard'),
-(106, 'Standard'),
-(201, 'Delux'),
-(202, 'Delux'),
-(203, 'Delux'),
-(204, 'Delux'),
-(205, 'Delux'),
-(301, 'Double Delux'),
-(302, 'Double Delux'),
-(303, 'Double Delux'),
-(304, 'Double Delux'),
-(305, 'Double Delux'),
-(401, 'Royal Suite'),
-(402, 'Royal Suite'),
-(403, 'Royal Suite'),
-(404, 'Royal Suite'),
-(405, 'Royal Suite');
+INSERT INTO `room_details` (`room_no`, `room_type`, `amount`) VALUES
+(101, 'Standard', 5000),
+(102, 'Standard', 5000),
+(103, 'Standard', 5000),
+(104, 'Standard', 5000),
+(105, 'Standard', 5000),
+(201, 'Delux', 7000),
+(202, 'Delux', 7000),
+(203, 'Delux', 7000),
+(204, 'Delux', 7000),
+(205, 'Delux', 7000),
+(301, 'Double Delux', 10000),
+(302, 'Double Delux', 10000),
+(303, 'Double Delux', 10000),
+(304, 'Double Delux', 10000),
+(305, 'Double Delux', 10000),
+(401, 'Royal Suite', 0),
+(402, 'Royal Suite', 0),
+(403, 'Royal Suite', 0),
+(404, 'Royal Suite', 0),
+(405, 'Royal Suite', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_login`
+--
+
+CREATE TABLE `user_login` (
+  `user_name` varchar(10) NOT NULL,
+  `password` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user_login`
+--
+
+INSERT INTO `user_login` (`user_name`, `password`) VALUES
+('good', 'good1'),
+('hi', 'hi123');
 
 --
 -- Indexes for dumped tables
@@ -253,6 +317,12 @@ ALTER TABLE `room_details`
   ADD PRIMARY KEY (`room_no`);
 
 --
+-- Indexes for table `user_login`
+--
+ALTER TABLE `user_login`
+  ADD PRIMARY KEY (`user_name`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -260,25 +330,25 @@ ALTER TABLE `room_details`
 -- AUTO_INCREMENT for table `billing`
 --
 ALTER TABLE `billing`
-  MODIFY `billing_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `billing_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `booking_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `booking_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `membership`
 --
 ALTER TABLE `membership`
-  MODIFY `membership_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `membership_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `room_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `room_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

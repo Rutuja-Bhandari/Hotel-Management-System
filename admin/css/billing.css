@@ -1,0 +1,21 @@
+.value{
+    padding-left: 92vh;
+color: white;
+font-size: 3.5vh;
+}
+.inputdetails1{
+    width:20vh;
+}
+.buttondetails1{
+    background-color: #4414bd;
+    margin-left: 97vh;
+}
+.result{
+    background:linear-gradient(120deg,#2980b9,#8e44ad) ;
+    border: 1vh solid white;
+    border-radius: 2vh;
+    margin:5vh;
+    padding: 5vh;
+    /* text-align: center; */
+    font-size: 3vh;
+}

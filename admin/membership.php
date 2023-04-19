@@ -14,7 +14,7 @@ include ("connections.php");
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Hotel Management System</title>
+    <title>Membership</title>
   </head>
   <body>
 
@@ -31,7 +31,7 @@ include ("connections.php");
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link navcolor" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link navcolor" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link navcolor" href="#">About</a>
@@ -43,7 +43,7 @@ include ("connections.php");
               <a class="nav-link navcolor" href="membershipallbooking.php">All bookings</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navcolor" href="roomdetails.php">Room bookings</a>
+              <a class="nav-link navcolor" href="roomdetails.php">Checkin Checkout details</a>
             </li>
       </li>
           </ul>
@@ -78,7 +78,7 @@ include ("connections.php");
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">rOYAL SUITE</h5>
+        <h5 class="modal-title" id="exampleModalCenterTitle">Royal Suite</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

@@ -89,11 +89,40 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Book now</title>
     <link rel="stylesheet" href="css/form_membership.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
+<header>
+        <!--######################## Navigation Bar######################################### -->
+
+        <div class="navIndex ">
+            <nav class="navbar navbar-expand-lg   ">
+                <a class="navbar-brand navcolor" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link navcolor" href="index.php">Home <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        
+                    </ul>
+
+                </div>
+        </div>
+        </nav>
+        </div>
+        
+    </header>
     <h1 class="heading">
         <span>B</span>
         <span>o</span>
@@ -211,7 +240,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     <label id="name-label" for="name">* Room no:</label>
                 </div>
                 <div class="rightTab">
-                    <input name="room_no" autofocus type="number" min="0" name="name" id="name" class="input-field"
+                    <input name="room_no" autofocus type="text" min="0" name="name" id="name" class="input-field"
                         placeholder="Enter Room number " required>
                 </div>
             </div>
@@ -239,7 +268,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </div>
                 <div class="rightTab">
                     <ul id="preferences" style="list-style: none;">
-                        <li class="checkbox"><label><input name="extra_bed" value="1" type="checkbox" class="userRatings">Extra bed (Rs 15000 per bed)</label></li>
+                        <li class="checkbox"><label><input name="extra_bed" value="1" type="checkbox" class="userRatings">Extra bed (Rs 1500 per bed)</label></li>
                         <li class="checkbox"><input name="car_parking" value="1" type="checkbox" class="userRatings">Car parking (Rs 300 per day)</li>
                         <li class="checkbox"><label><input name="spa" value="1" type="checkbox" class="userRatings">Spa (Rs 2800 per person)  </label></li>
                         <li class="checkbox"><label><input name="gym" value="1" type="checkbox" class="userRatings">Gym access (Rs 750 per day) </label></li>

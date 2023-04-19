@@ -129,7 +129,7 @@ Located just steps from some of the city's top attractions, including the renown
                         Ensuite bathroom<br>
                         Flat-screen TV<br>
                         Free WiFi<br>
-                        Rates = ₹10000 <br></b></p>
+                        Rates = ₹5000 <br></b></p>
         <div class="booknow">
           <button  type="button" class="btn btn-secondary btn_booknow" ><a style="color: white;" href="form_standard.php">Book Now</a></button>
           <button method="post" id="standard" type="submit" class="btn btn-secondary btn_booknow" data-toggle="modal" data-target="#exampleModalCenter"><a style="color: white;" >Check Availability</a></button>
@@ -179,7 +179,7 @@ Located just steps from some of the city's top attractions, including the renown
                         Ensuite bathroom<br>
                         Flat-screen TV<br>
                         Free WiFi<br>
-                        Rates = ₹10000 <br></b></p>
+                        Rates = ₹7000 <br></b></p>
         <div class="booknow">
           <button  type="button" class="btn btn-secondary btn_booknow" ><a style="color: white;" href="form_delux.php">Book Now</a></button>
           <button method="post" id="delux" type="submit" class="btn btn-secondary btn_booknow" data-toggle="modal" data-target="#exampleModalCenter1"><a style="color: white;" >Check Availability</a></button>

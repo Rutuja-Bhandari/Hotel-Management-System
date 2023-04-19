@@ -9,7 +9,7 @@ $booking_id  = $_GET['input_value'];
             $result=mysqli_query($con,$query);
             if ($result->num_rows == null) {
                 // Display an alert if the record does not exist
-                echo "<script>alert('Booking Id not found!')</script>";
+                echo "Booking Id doesnot exists!!";
               }
               else{
             $final_result=mysqli_fetch_assoc($result);

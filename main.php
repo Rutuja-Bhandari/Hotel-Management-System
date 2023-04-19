@@ -30,7 +30,7 @@ include ("connections.php");
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">images/
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link navcolor" href="#">Home <span class="sr-only">(current)</span></a>
@@ -42,16 +42,16 @@ include ("connections.php");
               <a class="nav-link navcolor" href="#">Room Type</a>
             </li>
           </ul>
-          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-          <a class="btn btn-primary" href="main.php" role="button">Log Out</a>
-          </div>
           
+          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+          <a class="btn btn-primary" href="user_login.php" role="button">Login</a>
+          </div>
         </div>
       </nav>
     </div>
     </header>
 
-
+images/
     <!--######################## Crousal  ######################################### --> 
    
     <div class="coursal" >
@@ -128,10 +128,9 @@ Located just steps from some of the city's top attractions, including the renown
                         Air conditioning<br>
                         Ensuite bathroom<br>
                         Flat-screen TV<br>
-                        Free WiFi<br>
-                        Rates = ₹5000 <br></b></p>
+                        Free WiFi<br></b></p>
         <div class="booknow">
-          <button  type="button" class="btn btn-secondary btn_booknow" ><a style="color: white;" href="form_standard.php">Book Now</a></button>
+          
           <button method="post" id="standard" type="submit" class="btn btn-secondary btn_booknow" data-toggle="modal" data-target="#exampleModalCenter"><a style="color: white;" >Check Availability</a></button>
         </div>
       </div>
@@ -178,10 +177,8 @@ Located just steps from some of the city's top attractions, including the renown
                         Air conditioning<br>
                         Ensuite bathroom<br>
                         Flat-screen TV<br>
-                        Free WiFi<br>
-                        Rates = ₹7000 <br></b></p>
+                        Free WiFi<br></b></p>
         <div class="booknow">
-          <button  type="button" class="btn btn-secondary btn_booknow" ><a style="color: white;" href="form_delux.php">Book Now</a></button>
           <button method="post" id="delux" type="submit" class="btn btn-secondary btn_booknow" data-toggle="modal" data-target="#exampleModalCenter1"><a style="color: white;" >Check Availability</a></button>
         </div>
       </div>
@@ -226,10 +223,9 @@ Located just steps from some of the city's top attractions, including the renown
                         Air conditioning<br>
                         Ensuite bathroom<br>
                         Flat-screen TV<br>
-                        Free WiFi<br>
-                        Rates = ₹10000 <br></b></p>
+                        Free WiFi<br></b></p>
         <div class="booknow">
-          <button  type="button" class="btn btn-secondary btn_booknow" ><a style="color: white;" href="form_doubledelux.php">Book Now</a></button>
+          
           <button method="post" id="double_delux" type="submit" class="btn btn-secondary btn_booknow" data-toggle="modal" data-target="#exampleModalCenter2"><a style="color: white;" >Check Availability</a></button>
         </div>
       </div>
@@ -291,7 +287,7 @@ Located just steps from some of the city's top attractions, including the renown
       </div>
     </div>
     <div class="img-box">
-      <img src="images/gal4.jpg" alt="" />
+      <img src="gal4.jpg" alt="" />
       <div class="transparent-box">
         <div class="caption">
           <p>Best views</p>

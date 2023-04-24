@@ -151,4 +151,6 @@ echo "<br><p style='color:orange;'><b>Total Amount: </b>". $amount."</p>";
 $tsql4 = "UPDATE billing set amount=$amount where billing_id=$booking_id ";
 mysqli_query($con, $tsql4);
 
+
+
 ?>

@@ -362,13 +362,155 @@ Located just steps from some of the city's top attractions, including the renown
 
 </section>
 
-
-
-
-
-
-
 <!-- ####################facilities end############33 -->
+
+
+
+
+
+
+<!-- ##################nearby places start ###################3 -->
+<section class="pt-5 pb-5">
+    <div class="container10">
+        <div class="row">
+            <div class="col-6">
+                <h3 class="heading" style="float:left;"><b>Nearby places</b></h3>
+                <!-- <p class="heading"> <b>Our Gallery</b> </p> -->
+            </div>
+            <div class="col-6 text-right">
+                <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                    <i class="fa fa-arrow-left"></i>
+                </a>
+                <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="col-12">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="images/chatushrungi-mata-temple2.jpg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Chaturshrungi Temple</h4>
+                                            <p class="card-text">The Chattushringi temple is 90 feet (27 m) high and 125 feet (38 m) wide and is a symbol of power and faith.The temple is at the top of a mountain and gives a great view of the city skyline.</p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="images/quanspa.jpg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Quan Spa</h4>
+                                            <p class="card-text">Indulge in a day of luxury and relaxation during your Pune visit. Quan Spa, located here at the hotel, features 15,000 square feet of tranquility. Pamper yourself with a massage, beauty treatment and much more.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="images/studiocopree1.jpg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Studio Coppre</h4>
+                                            <p class="card-text">Coppre has been responsible for the revival of the heritage craft of beaten metalware in Maharashtra.Carrying back home a Coppre product will enhance the modern home while helping us preserve this traditional craft.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="images/darshan.jpg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Darshan Museum</h4>
+                                            <p class="card-text">Darshan is not only a 'museum' but keeps a memory alive.It's done through 3D Holographics, Life-Like Statues, Realistic Sets, Hi-Def Audio, HD Video, Theatrical Lighting and much more!Darshan is the next step in story-telling</p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="images/parvati1.jpg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Parvati Temple</h4>
+                                            <p class="card-text">One of the poluar attractions in Pune for Trekking, Nature walk and amongts foodies.Parvati temple, however, is mainly dedicated to Lord Shiva and his divine consort Goddess Parvati. To reach here, a person has to climb about 103 stone steps.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="images/pavana-dam1.jpg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Pavna River</h4>
+                                            <p class="card-text">Such a good place to visit wid ur friends,family. Couples could also go for it. If u r a nature lover & adventure seeker ; it's ur place...</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="images/phoenix1.jpg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Phoenix Market City</h4>
+                                            <p class="card-text">It is big spacious and has all the major brands in apparel, eletronics, grocery, food and luxury products.</p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="images/floatation-therapy-session1.jpg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Shalom Float and wellness centre</h4>
+                                            <p class="card-text">Shalom Float and Wellness centre is the first dedicated float centre to open in India at Pune. It provides floatation therapy in a sensory deprivation tank known as Relaxopod or Relaxoroom in zero gravity.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="images/art1.jpg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Art2Day Gallery</h4>
+                                            <p class="card-text">Great stuff to look at.Art and articrafts , one after another are wonderful pieces . You would definitely enjoy the good work by the latest artists here.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+                            <script type='text/javascript'></script>
+<!-- ###########################################nearby places end################################## -->
+
+
+
+
+
 
 
 <!-- ##########################footer start################### -->

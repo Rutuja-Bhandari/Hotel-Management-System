@@ -34,6 +34,17 @@ function checkout() {
   xhttp.open("GET", "checkout.php?input_value=" + input_value, true);
   xhttp.send();
 }
+function cancel() {
+  var input_value = document.getElementById("input_value").value;
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      alert("Successfully Cancel Booking !!");
+    }
+  };
+  xhttp.open("GET", "cancel.php?input_value=" + input_value, true);
+  xhttp.send();
+}
 
 
 function Delete() {

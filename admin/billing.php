@@ -9,6 +9,14 @@ session_start();
 include "connections.php";
 $booking_id  = $_GET['input_value'];
 // $booking_id  =31;
+
+$tsql = "select Status from billing where billing_id=$booking_id ";
+$tre = mysqli_query($con, $tsql);
+$trow = mysqli_fetch_array($tre);
+if($trow['Status']==="Check Out")
+{
+
+
 echo"<p  style='color:black; font-size: 4vh;'><b>JW Marriott Team</b></p>";
 echo "
 <table>
@@ -253,5 +261,10 @@ Facilities:<br>
         echo "Email sent successfully";
     }
 
+}
 
+else
+{
+    echo "User has not Check out";
+}
 ?>

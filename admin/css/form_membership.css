@@ -4,7 +4,14 @@ html,body {
     font-family: 'Raleway', Helvetica, sans-serif;
     min-width: 320px;
 }
+.navIndex{
+    background-color: rgb(31, 31, 33);
+}
 
+
+.navcolor{
+    color: white;
+}
 body {
     
     /* opacity: 0.6; */

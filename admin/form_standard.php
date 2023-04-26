@@ -63,6 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     Check-in Date: $arrival_date<br>
     Check-out Date: $leaving_date<br>
     Room no: $room_no<br>
+    Room Type: Standard<br>
     Number of Adults: $no_of_adults<br>
     Number of Adults: $no_of_childrens<br>
     Please note that your reservation is guaranteed, and you do not need to reconfirm it. If you need to make any changes to your reservation, please contact us at 7420054834 or reply to this email, and we will be happy to assist you.<br>
@@ -93,7 +94,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Book now</title>
     <link rel="stylesheet" href="css/form_membership.css">
-    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>

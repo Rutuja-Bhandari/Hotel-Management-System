@@ -1,4 +1,10 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer-master/src/Exception.php';
+require 'PHPMailer-master/src/PHPMailer.php';
+require 'PHPMailer-master/src/SMTP.php';
 session_start();
 include "connections.php";
 $booking_id  = $_GET['input_value'];
@@ -20,7 +26,7 @@ echo "
               </thead>
               <tbody>";
 
-$tsql = "select booking_id,first_name,last_name,room_no,room_type,arrival_date,leaving_date,Status from booking,rooms,billing where booking_id=$booking_id and room_id=$booking_id and billing_id=$booking_id ";
+$tsql = "select booking_id,first_name,last_name,email,room_no,room_type,arrival_date,leaving_date,Status from booking,rooms,billing where booking_id=$booking_id and room_id=$booking_id and billing_id=$booking_id ";
 $tre = mysqli_query($con, $tsql);
 while ($trow = mysqli_fetch_array($tre)) {
     // $co =$trow['stat'];
@@ -36,6 +42,14 @@ while ($trow = mysqli_fetch_array($tre)) {
                           <th>" . $trow['leaving_date'] . "</th>
                           <th>" . $trow['Status'] . "</th>
                           </tr>";
+    $booking_id=$trow['booking_id'];
+    $first_name=$trow['first_name'];
+    $last_name=$trow['last_name'];
+    $room_no=$trow['room_no'];
+    $arrival_date= $trow['arrival_date'];
+    $leaving_date=$trow['leaving_date'];
+    $Status= $trow['Status'] ;
+    $email=$trow['email'] ;
     // }
 
 }
@@ -72,6 +86,11 @@ echo "
                                         <th>" . $trow1['spa'] . "</th>
                                         <th>" . $trow1['gym'] . "</th>
                                         </tr>";
+
+                            $extra_bed=$trow1['extra_bed'];
+                            $car_parking=$trow1['car_parking'];
+                            $spa=$trow1['spa'];
+                            $gym=$trow1['gym']; 
                   // }
                   if($trow1['extra_bed']==="Yes")
                   {
@@ -151,6 +170,88 @@ echo "<br><p style='color:orange;'><b>Total Amount: </b>". $amount."</p>";
 $tsql4 = "UPDATE billing set amount=$amount where billing_id=$booking_id ";
 mysqli_query($con, $tsql4);
 
+
+
+$mail = new PHPMailer();
+    $mail->IsSMTP();
+
+    $mail->SMTPDebug = 0;
+    $mail->SMTPAuth = TRUE;
+    $mail->SMTPSecure = "tls";
+    $mail->Port = 587;
+    $mail->Host = "smtp.gmail.com";
+    $mail->Username = "rutuja.22110669@viit.ac.in";
+    $mail->Password = "smar418#";
+    $mail->IsHTML(true);
+    $mail->AddAddress("$email", "$first_name $last_name");
+    $mail->SetFrom("rutuja.22110669@gmail.com", "Rutuja");
+    $mail->Subject = "Bill at JW Marriott";
+    $content = "<b>Dear $first_name ,<br>
+    Your bill  is shown below
+
+    <table>
+<thead>
+<tr>
+<th>Booking Id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                      <th>Room Number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                      <th>Arrival Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                      <th>Leaving Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                      <th>Status &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+
+                  </tr>
+              </thead>
+              <tbody>
+              
+    <tr>
+                          <th>" . $booking_id . "</th>
+                          <th>" . $first_name . " " . $last_name . "</th>
+                          <th>" . $room_no . "</th>
+                          <th>" . $arrival_date . "</th>
+                          <th>" . $leaving_date . "</th>
+                          <th>" . $Status . "</th>
+                          </tr>
+</tbody>
+</table>
+
+Facilities:<br>
+<table>
+<thead>
+<tr >
+<th>Extra bed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Car Parking &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                      <th>Spa &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                      <th>Gym &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                                        <th>" . $extra_bed . "</th>
+                                        <th>" . $car_parking.  "</th>
+                                        <th>" . $spa. "</th>
+                                        <th>" . $gym. "</th>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+
+                                      Cost for one day in ".$room_type['room_type']." room : ".$price5."<br>
+                                     Cost for  ".$interval->days." days in ".$room_type['room_type']." room : ".$price5*$interval->days."<br>
+                                        
+                                        
+                                       Total Amount: ". $amount."<br>
+
+    Thank you for choosing JW Marriott, and we look forward to welcoming you soon.<br>
+    Best regards,<br>
+    JW Marriott Team.</b>";
+
+    $mail->MsgHTML($content);
+    if (!$mail->Send()) {
+        echo "Error while sending Email.";
+        var_dump($mail);
+    } else {
+        echo "Email sent successfully";
+    }
 
 
 ?>

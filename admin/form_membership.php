@@ -1,4 +1,10 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer-master/src/Exception.php';
+require 'PHPMailer-master/src/PHPMailer.php';
+require 'PHPMailer-master/src/SMTP.php';
     session_start();
     include ("connections.php");
     
@@ -19,8 +25,45 @@
 
             $query = " INSERT INTO `membership` ( `first_name`, `middle_name`, `last_name`, `aadhar`, `email`, `gender`, `phone_no`, `address`,`room_no`,`verified`) VALUES ('$first_name', '$middle_name', '$last_name', '$aadhar_no', '$email', '$gender', '$phone_no', '$address','$room_no','$verified')";
             mysqli_query($con,$query);
+            $query3 = "SELECT membership_id FROM membership WHERE membership_id IN (SELECT membership_id FROM membership WHERE membership_id > 0 )ORDER BY membership_id DESC";
+    $result = mysqli_query($con, $query3);
+    $row = mysqli_fetch_assoc($result);
+    $membership_id = $row["membership_id"];
             echo "alert('Congratulation! Your booking is confirmed!!')";
             header("location:membership.php");
+            $mail = new PHPMailer();
+    $mail->IsSMTP();
+
+    $mail->SMTPDebug = 0;
+    $mail->SMTPAuth = TRUE;
+    $mail->SMTPSecure = "tls";
+    $mail->Port = 587;
+    $mail->Host = "smtp.gmail.com";
+    $mail->Username = "rutuja.22110669@viit.ac.in";
+    $mail->Password = "smar418#";
+    $mail->IsHTML(true);
+    $mail->AddAddress("$email", "$first_name $last_name");
+    $mail->SetFrom("rutuja.22110669@gmail.com", "Rutuja");
+    $mail->Subject = "Your Reservation Confirmation at JW Marriott";
+    $content = "<b>Dear $first_name ,<br>
+    We are delighted to confirm your membership at JW Marriott . We appreciate your choice to stay with us and look forward to providing you with a comfortable and memorable experience.<br>
+    Below are the details of your booking:<br>
+    membership id : $membership_id<br>
+    Name: $first_name<br>
+    Room no: $room_no<br>
+    Room Type: Royal Suite<br>
+    Please note that your membership is guaranteed, and you do not need to reconfirm it. If you need to make any changes to your reservation, please contact us at 7420054834 or reply to this email, and we will be happy to assist you.<br>
+    Thank you for choosing JW Marriott, and we look forward to welcoming you soon.<br>
+    Best regards,<br>
+    JW Marriott Team.</b>";
+
+    $mail->MsgHTML($content);
+    if (!$mail->Send()) {
+        echo "Error while sending Email.";
+        var_dump($mail);
+    } else {
+        echo "Email sent successfully";
+    }
         }
 
 ?>
@@ -36,7 +79,6 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Book now</title>
     <link rel="stylesheet" href="css/form_membership.css">
-    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 <header>

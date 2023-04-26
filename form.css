@@ -19,6 +19,14 @@ body {
     background-attachment: fixed;
   }
   
+  .navIndex{
+    background-color: rgb(31, 31, 33);
+}
+
+
+.navcolor{
+    color: white;
+}
 
 #main-form {
     background-color: #0c1022;

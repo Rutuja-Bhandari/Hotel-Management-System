@@ -1,12 +1,11 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
 
 require 'PHPMailer-master/src/Exception.php';
 require 'PHPMailer-master/src/PHPMailer.php';
 require 'PHPMailer-master/src/SMTP.php';
 session_start();
-include("connections.php");
+include "connections.php";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $first_name = $_POST["first_name"];
@@ -22,10 +21,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $leaving_date = $_POST["leaving_date"];
     $no_of_adults = $_POST["no_of_adults"];
     $no_of_childrens = $_POST["no_of_childrens"];
-    $extra_bed= isset($_POST["extra_bed"]) ? "Yes" : "No";
-    $car_parking= isset($_POST["car_parking"]) ? "Yes" : "No";
-    $spa= isset($_POST["spa"]) ? "Yes" : "No";
-    $gym= isset($_POST["gym"]) ? "Yes" : "No";
+    $extra_bed = isset($_POST["extra_bed"]) ? "Yes" : "No";
+    $car_parking = isset($_POST["car_parking"]) ? "Yes" : "No";
+    $spa = isset($_POST["spa"]) ? "Yes" : "No";
+    $gym = isset($_POST["gym"]) ? "Yes" : "No";
 
     $query = " INSERT INTO `booking` ( `first_name`, `middle_name`, `last_name`, `aadhar`, `email`, `gender`, `phone_no`, `no_of_adult`, `no_of_child`, `address`) VALUES ('$first_name', '$middle_name', '$last_name', '$aadhar_no', '$email', '$gender', '$phone_no', '$no_of_adults', '$no_of_childrens', '$address')";
     mysqli_query($con, $query);
@@ -37,15 +36,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $result = mysqli_query($con, $query3);
     $row = mysqli_fetch_assoc($result);
     $booking_id = $row["booking_id"];
-    $query4="INSERT INTO `facilities` ( `booking_id`,`extra_bed`, `car_parking`, `spa`, `gym`) VALUES ('$booking_id','$extra_bed', '$car_parking', '$spa', '$gym');";
-    mysqli_query($con,$query4);
+    $query4 = "INSERT INTO `facilities` ( `booking_id`,`extra_bed`, `car_parking`, `spa`, `gym`) VALUES ('$booking_id','$extra_bed', '$car_parking', '$spa', '$gym');";
+    mysqli_query($con, $query4);
     echo "alert('Congratulation! Your booking is confirmed!!')";
     header("location:index.php");
     $mail = new PHPMailer();
     $mail->IsSMTP();
 
     $mail->SMTPDebug = 0;
-    $mail->SMTPAuth = TRUE;
+    $mail->SMTPAuth = true;
     $mail->SMTPSecure = "tls";
     $mail->Port = 587;
     $mail->Host = "smtp.gmail.com";
@@ -119,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         </div>
         </nav>
         </div>
-        
+
     </header>
     <h1 class="heading">
         <span>B</span>
@@ -186,7 +185,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     <label id="number-label" for="age">* Aadhar no: </label>
                 </div>
                 <div class="rightTab">
-                    <input name="aadhar_no" pattern="\d{12}" autocomplete="off" title="Ten numbers" type="text"
+                    <input name="aadhar_no" pattern="\d{12}" autocomplete="off" title="Twelve numbers" type="text"
                         id="number" class="input-field" placeholder="Enter your Aadhar no">
                 </div>
             </div>
@@ -233,15 +232,31 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         class="input-field" placeholder="Enter number od children" required>
                 </div>
             </div>
+
             <div class="rowTab">
                 <div class="labels">
-                    <label id="name-label" for="name">* Room no:</label>
+                    <label for="userRating">* Room No: </label>
                 </div>
                 <div class="rightTab">
-                    <input name="room_no" autofocus type="text" min="0" name="name" id="name" class="input-field"
-                        placeholder="Enter Room number " required>
+                    <ul style="list-style: none;" name="room_no">
+
+                        <?php
+                        $query1="select room_details.room_no from room_details where room_type = 'Standard' and room_details.room_no not in (select room_no from rooms,billing where room_id=billing_id and room_type='Standard' and Status in ('Booked','Check In'))";
+                        $result1 = mysqli_query($con,$query1);
+                        while ($row = mysqli_fetch_assoc($result1)) {
+                        ?>
+                        <li class="radio"><label><input name="room_no" name="radio-buttons" value="<?php echo $row['room_no'] ; ?>" type="radio"
+                                    class="userRatings"><?php echo $row['room_no'] ; ?></label></li>
+                        <?php
+                            }
+                        ?>
+                    </ul>
                 </div>
             </div>
+
+
+            
+
             <div class="rowTab">
                 <div class="labels">
                     <label id="name-label" for="name">* Arrival date:</label>
@@ -270,7 +285,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         <li class="checkbox"><input name="car_parking" value="1" type="checkbox" class="userRatings">Car parking (Rs 300 per day)</li>
                         <li class="checkbox"><label><input name="spa" value="1" type="checkbox" class="userRatings">Spa (Rs 2800 per person)  </label></li>
                         <li class="checkbox"><label><input name="gym" value="1" type="checkbox" class="userRatings">Gym access (Rs 750 per day) </label></li>
-                        
+
                     </ul>
                 </div>
             </div>

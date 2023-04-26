@@ -236,11 +236,22 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             </div>
             <div class="rowTab">
                 <div class="labels">
-                    <label id="name-label" for="name">* Room no:</label>
+                    <label for="userRating">* Room No: </label>
                 </div>
                 <div class="rightTab">
-                    <input name="room_no" autofocus type="text" min="0" name="name" id="name" class="input-field"
-                        placeholder="Enter Room number " required>
+                    <ul style="list-style: none;" name="room_no">
+
+                        <?php
+                        $query1="select room_details.room_no from room_details where room_type = 'Double Delux' and room_details.room_no not in (select room_no from rooms,billing where room_id=billing_id and room_type='Double Delux' and Status in ('Booked','Check In'))";
+                        $result1 = mysqli_query($con,$query1);
+                        while ($row = mysqli_fetch_assoc($result1)) {
+                        ?>
+                        <li class="radio"><label><input name="room_no" name="radio-buttons" value="<?php echo $row['room_no'] ; ?>" type="radio"
+                                    class="userRatings"><?php echo $row['room_no'] ; ?></label></li>
+                        <?php
+                            }
+                        ?>
+                    </ul>
                 </div>
             </div>
             <div class="rowTab">

@@ -11,4 +11,6 @@ $query1="DELETE from rooms where room_id = '$booking_id'";
 mysqli_query($con,$query1);
 $query2="DELETE from billing where billing_id = '$booking_id'";
 mysqli_query($con,$query2);
+$query3="DELETE from facilities where booking_id = '$booking_id'";
+mysqli_query($con,$query3);
 ?>

@@ -34,10 +34,7 @@ include ("connections.php");
               <a class="nav-link navcolor" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navcolor" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link navcolor" href="#">Room Type</a>
+              <a class="nav-link navcolor" href="#about">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link navcolor" href="membershipallbooking.php">All bookings</a>
@@ -68,9 +65,14 @@ include ("connections.php");
 
     <!-- ##################### About ##################-->
 
-    <div class="container">
+    <div class="container" id="about">
       <h1 class="aboutcolour"> About</h1>
-      <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolore ullam quo dolorum veniam molestiae, ea optio amet sint porro harum nobis minima maiores odit, suscipit perferendis dolores incidunt officia quidem eaque commodi, ad qui. Laborum dolorum consequatur et odio, maiores totam aliquam, recusandae consectetur officiis unde saepe fuga minima architecto omnis quod. Praesentium voluptate dolorum, quasi iste perspiciatis deleniti exercitationem, numquam quia odio, ea iure accusamus reprehenderit maiores ullam voluptatibus voluptatem magnam dignissimos! Ducimus sint earum corrupti vel! Est assumenda perferendis minima corporis atque impedit illo asperiores esse velit, maiores cumque ab eos pariatur beatae quis. Natus ipsam, reiciendis quas dolorem tempora similique consectetur architecto neque delectus. Minus molestias molestiae amet cupiditate odit. Eius quam iste id adipisci veritatis minima consequuntur molestiae. Architecto quasi, explicabo dolorum exercitationem perspiciatis, molestias deleniti mollitia repellendus, dolore dolor ex consectetur consequuntur. Dicta, aperiam impedit quod delectus iste repudiandae magnam accusantium ipsam expedita iure sapiente amet facere id ducimus sunt doloremque assumenda odit? Expedita saepe commodi, quibusdam hic nesciunt dolor laudantium dignissimos dolorum eos soluta amet perferendis assumenda ipsa sit tempora sequi quasi reiciendis deserunt earum, quisquam blanditiis dolores illo! At magni praesentium, libero numquam voluptas alias obcaecati sequi consectetur doloribus est amet, nemo nobis atque iusto non nostrum! Eaque molestias illum esse temporibus placeat est veniam magnam cumque voluptas minima ab iste officiis, nam atque at modi nemo omnis numquam molestiae repudiandae earum! Obcaecati aut natus dolor rerum! Amet laboriosam unde ullam quae voluptatem. Sed earum eius quisquam. Eos, deserunt. Officiis dicta eligendi esse perferendis fugit ad repellat mollitia eum quaerat. Odio dolorum consectetur tenetur placeat ut ad ipsam, beatae similique laudantium facilis nostrum, in saepe quam corporis ipsa debitis. Dolores ipsum et fugiat voluptates ex, architecto deserunt incidunt placeat distinctio. Similique maiores voluptate ea cupiditate magni praesentium! Dicta consequuntur nostrum quis earum.</p>
+      <p >Holiday ownership, also known as timeshare ownership, is a popular way for people to enjoy the benefits of owning a vacation home without the hassle and expense of maintaining one. In a timeshare ownership model, a group of people come together to purchase a vacation property, which they can use for a set amount of time each year.
+
+One of the biggest advantages of holiday ownership is the flexibility it offers. Instead of being tied down to one vacation property, holiday owners have access to a network of properties located all over India. This means that they can choose to vacation in different parts of the country each year, without having to worry about the cost of accommodation
+
+Another advantage of holiday ownership is the sense of community that it offers. By becoming a member of a group, individuals have the opportunity to connect with like-minded people who share their love of travel. This can lead to lifelong friendships and the opportunity to create lasting memories with people from all over the world.
+</p>
     </div>
 
 <!-- Modal -->

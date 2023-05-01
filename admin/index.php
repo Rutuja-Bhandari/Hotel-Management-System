@@ -24,7 +24,7 @@ include ("connections.php");
   <header>
     <!--######################## Navigation Bar######################################### -->
   
-    <div class="navIndex ">
+    <div class="navIndex " id="home">
     <nav class="navbar navbar-expand-lg   ">
       <a class="navbar-brand navcolor" href="#">JW Marriott Hotel</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,20 +33,19 @@ include ("connections.php");
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link navcolor" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link navcolor" href="#home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navcolor" href="#">About</a>
+              <a class="nav-link navcolor" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navcolor" href="#">Room Type</a>
+              <a class="nav-link navcolor" href="#rooms">Room Type</a>
             </li>
           </ul>
           
           <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
           <a class="btn btn-primary" href="details.html" role="button">Details</a>
           <a class="btn btn-primary" href="membership.php" role="button">membership</a>
-          <a class="btn btn-primary" href="allbooking.php" role="button">All Bookings</a>
           </div>
         </div>
       </nav>
@@ -97,7 +96,7 @@ include ("connections.php");
 
     <!-- ##################### About ##################-->
 
-    <div class="container">
+    <div class="container" id="about">
       <h1 class="aboutcolour"> About</h1>
       <p >Welcome to The JW Marriott, a luxurious boutique hotel located in the Pune. Our hotel offers a unique blend of modern amenities and timeless charm, with elegant decor and world-class service that will make your stay unforgettable.
 
@@ -112,7 +111,7 @@ Located just steps from some of the city's top attractions, including the renown
 
 
     <!-- ###################### Hotel Type ######################-->
-  <div class="container1">
+  <div class="container1" id="rooms">
 
     <h1 class="roomsandrates">Rooms and Rates</h1>
 

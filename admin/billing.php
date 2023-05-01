@@ -12,8 +12,15 @@ $booking_id  = $_GET['input_value'];
 
 $tsql = "select Status from billing where billing_id=$booking_id ";
 $tre = mysqli_query($con, $tsql);
-$trow = mysqli_fetch_array($tre);
-if($trow['Status']==="Check Out")
+
+if ($tre->num_rows == null) {
+    // Display an alert if the record does not exist
+    echo "Booking Id doesnot exists!!";
+  }
+  else
+  {
+    $trow = mysqli_fetch_array($tre);
+if($trow['Status']==="Check Out" )
 {
 
 
@@ -267,4 +274,5 @@ else
 {
     echo "User has not Check out";
 }
+  }
 ?>

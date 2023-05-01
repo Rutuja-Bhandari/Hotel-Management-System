@@ -285,15 +285,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     </ul>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
             <button id="submit" type="submit">Confirm</button>
         </form>
     </div>

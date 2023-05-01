@@ -281,9 +281,7 @@ font-size: 4vh;
     font-size: 2.5vh;
     font-weight: bold;
   }
-  .buttonallign{
-    /* padding-left: 63vh; */
-  }
+  
 
 .buttondetails{
     background-color: #4414bd;
@@ -908,8 +906,3 @@ h1,h2{
     margin: 10vh 5vh;
 }
 
-
-
-.result1{
-
-}

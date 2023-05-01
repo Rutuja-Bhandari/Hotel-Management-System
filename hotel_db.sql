@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2023 at 07:44 AM
+-- Generation Time: May 01, 2023 at 08:52 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -35,6 +35,13 @@ CREATE TABLE `billing` (
   `Status` varchar(9) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `billing`
+--
+
+INSERT INTO `billing` (`billing_id`, `arrival_date`, `leaving_date`, `amount`, `Status`) VALUES
+(1, '2023-05-01', '2023-05-02', 0, 'Booked');
+
 -- --------------------------------------------------------
 
 --
@@ -55,6 +62,13 @@ CREATE TABLE `booking` (
   `address` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `booking`
+--
+
+INSERT INTO `booking` (`booking_id`, `first_name`, `middle_name`, `last_name`, `aadhar`, `email`, `gender`, `phone_no`, `no_of_adult`, `no_of_child`, `address`) VALUES
+(1, 'Rutuja', 'Bhushan', 'Bhandari', 352145236895, 'happy.thoughts.845@gmail.com', 'Female', 9563258563, 2, 0, 'Sai Nagr,Pune');
+
 -- --------------------------------------------------------
 
 --
@@ -68,6 +82,13 @@ CREATE TABLE `facilities` (
   `spa` varchar(3) NOT NULL DEFAULT 'No',
   `gym` varchar(3) NOT NULL DEFAULT 'No'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `facilities`
+--
+
+INSERT INTO `facilities` (`booking_id`, `extra_bed`, `car_parking`, `spa`, `gym`) VALUES
+(1, 'No', 'Yes', 'Yes', 'No');
 
 -- --------------------------------------------------------
 
@@ -108,6 +129,14 @@ CREATE TABLE `membership` (
   `verified` varchar(3) NOT NULL DEFAULT 'no'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `membership`
+--
+
+INSERT INTO `membership` (`membership_id`, `first_name`, `middle_name`, `last_name`, `aadhar`, `email`, `gender`, `phone_no`, `address`, `room_no`, `verified`) VALUES
+(1, 'Minal', 'Tushar', 'Chaudhari', 586325965471, 'minal.22110361@viit.ac.in', 'Female', 9652356896, 'Sai Nagar', 403, 'Yes'),
+(2, 'Sanika', 'Prashant', 'Bhalerao', 856985621423, 'sanika34@gmail.com', 'Female', 9636412354, 'Rose Merry Society, Pune', 402, 'Yes');
+
 -- --------------------------------------------------------
 
 --
@@ -122,6 +151,13 @@ CREATE TABLE `membership_record` (
   `status` varchar(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `membership_record`
+--
+
+INSERT INTO `membership_record` (`member_id`, `arrival_date`, `leaving_date`, `room_no`, `status`) VALUES
+(1, '2023-05-01', '2023-05-02', 403, 'Check Out');
+
 -- --------------------------------------------------------
 
 --
@@ -133,6 +169,13 @@ CREATE TABLE `rooms` (
   `room_no` int(3) DEFAULT NULL,
   `room_type` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `rooms`
+--
+
+INSERT INTO `rooms` (`room_id`, `room_no`, `room_type`) VALUES
+(1, 103, 'Standard');
 
 -- --------------------------------------------------------
 
@@ -261,25 +304,25 @@ ALTER TABLE `user_login`
 -- AUTO_INCREMENT for table `billing`
 --
 ALTER TABLE `billing`
-  MODIFY `billing_id` int(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `billing_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `booking_id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `booking_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `membership`
 --
 ALTER TABLE `membership`
-  MODIFY `membership_id` int(2) NOT NULL AUTO_INCREMENT;
+  MODIFY `membership_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `room_id` int(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `room_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

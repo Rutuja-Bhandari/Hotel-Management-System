@@ -8,7 +8,6 @@ require 'PHPMailer-master/src/SMTP.php';
 session_start();
 include "connections.php";
 $booking_id  = $_GET['input_value'];
-// $booking_id  =31;
 
 $tsql = "select Status from billing where billing_id=$booking_id ";
 $tre = mysqli_query($con, $tsql);

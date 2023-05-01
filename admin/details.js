@@ -15,7 +15,7 @@ function checkin() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      alert("Successfully Check In!!");
+      document.getElementById("result").innerHTML = this.responseText;
     }
   };
   xhttp.open("GET", "checkin.php?input_value=" + input_value, true);
@@ -28,7 +28,7 @@ function checkout() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      alert("Successfully Check Out !!");
+      document.getElementById("result").innerHTML = this.responseText;
     }
   };
   xhttp.open("GET", "checkout.php?input_value=" + input_value, true);
@@ -39,7 +39,7 @@ function cancel() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      alert("Successfully Cancel Booking !!");
+      document.getElementById("result").innerHTML = this.responseText;
     }
   };
   xhttp.open("GET", "cancel.php?input_value=" + input_value, true);
@@ -52,7 +52,7 @@ function Delete() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      alert("Deleted Successfully !!");
+      document.getElementById("result").innerHTML = this.responseText;
     }
   };
   xhttp.open("GET", "delete.php?input_value=" + input_value, true);

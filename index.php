@@ -72,7 +72,7 @@ include ("connections.php");
           <div class="carousel-item">
             <img src="images/mainpagebedroom2.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h3>Luxuru bedrooms</h3>
+              <h3>Luxury bedrooms</h3>
               <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
             </div>
           </div>

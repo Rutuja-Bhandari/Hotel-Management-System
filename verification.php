@@ -121,7 +121,5 @@ if (isset($_POST["verify"])) {
         </script>
         <?php
     }
-
 }
-
 ?>
